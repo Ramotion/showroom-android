@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context="com.ramotion.showroom.ShowroomActivity">
+
+    <!-- Main content background -->
+    <ImageView
+        android:id="@+id/sr_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sr_bg"
+        android:scaleX="1.25"
+        android:scaleY="1.25" />
+
+    <!-- Title view -->
+    <FrameLayout
+        android:id="@+id/sr_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/sr_screen_border_padding"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sr_title_icon"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/sr_ramotion_logo_seq" />
+
+            <ImageView
+                android:id="@+id/sr_title_text"
+                style="@style/sr_title_brand_text"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/sr_title_icon"
+                android:layout_toRightOf="@id/sr_title_icon"
+                android:contentDescription="RAMOTION TEXT LOGO"
+                android:src="@drawable/sr_text_logo" />
+
+            <View
+                android:id="@+id/sr_title_help_btn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/sr_info_icon" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <!-- Main content view with slider and button-->
+    <LinearLayout
+        android:id="@+id/sr_main_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sr_title_layout"
+        android:orientation="vertical">
+
+        <com.ramotion.showroom.SliderContainer
+            android:id="@+id/sr_slide_pager_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="10dp"
+            android:paddingEnd="@dimen/sr_screen_border_padding"
+            android:paddingStart="@dimen/sr_screen_border_padding" />
+
+        <TextView
+            android:id="@+id/sr_slider_position_counter"
+            style="@style/sr_slider_position_counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="@dimen/sr_screen_border_padding"
+            android:layout_marginRight="@dimen/sr_screen_border_padding"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/sr_btn_contact"
+            style="@style/sr_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="@dimen/sr_screen_border_padding"
+            android:layout_marginLeft="@dimen/sr_screen_border_padding"
+            android:layout_marginRight="@dimen/sr_screen_border_padding"
+            android:background="@drawable/sr_button_contact"
+            android:text="@string/sr_contact_us_btn_text" />
+
+    </LinearLayout>
+
+    <!-- Help overlay view with text and bottom panel -->
+    <RelativeLayout
+        android:id="@+id/sr_help_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sr_help_overlay_bg"
+        android:visibility="gone">
+
+        <include layout="@layout/sr_help_layout_content" />
+
+
+        <include layout="@layout/sr_help_layout_bottom_bar" />
+
+        <ImageView
+            android:id="@+id/sr_help_layout_title_background"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:alpha="0"
+            android:background="@drawable/sr_help_title_bg" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

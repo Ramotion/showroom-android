@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sr_content_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/sr_slider_card_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp">
+
+            <!-- Slide Title -->
+
+            <TextView
+                android:id="@+id/sr_slider_card_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textAppearance="@style/sr_slider_card_title_text" />
+
+            <ImageButton
+                android:id="@+id/sr_slider_card_share_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="3dp"
+                android:background="@color/sr_content_bg"
+                android:src="@drawable/sr_share_icon" />
+
+            <!-- Slide description-->
+            <TextView
+                android:id="@+id/sr_slider_card_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sr_slider_card_title_text"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/sr_slider_card_description_text" />
+
+            <!-- Time notes-->
+            <ImageView
+                android:id="@+id/sr_slider_card_clock_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/sr_content_bg"
+                android:src="@drawable/sr_hours_icon" />
+
+            <TextView
+                android:id="@+id/sr_slider_card_time_note_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/sr_slider_card_clock_icon"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/sr_slider_card_clock_icon"
+                android:padding="1dp"
+                android:textAppearance="@style/sr_slider_card_note_text" />
+
+            <!-- Tech notes-->
+            <ImageView
+                android:id="@+id/sr_slider_card_gear_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_above="@id/sr_slider_card_clock_icon"
+                android:layout_alignLeft="@id/sr_slider_card_clock_icon"
+                android:layout_alignStart="@id/sr_slider_card_clock_icon"
+                android:layout_marginBottom="10dp"
+                android:background="@color/sr_content_bg"
+                android:src="@drawable/sr_technology_icon" />
+
+            <TextView
+                android:id="@+id/sr_slider_card_tech_note_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/sr_slider_card_gear_icon"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/sr_slider_card_gear_icon"
+                android:padding="1dp"
+                android:textAppearance="@style/sr_slider_card_note_text" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+

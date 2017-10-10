@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="sr_screen_border_padding">30dp</dimen>
+
+    <dimen name="fc_activity_horizontal_margin">16dp</dimen>
+    <dimen name="fc_activity_vertical_margin">16dp</dimen>
+
+</resources>

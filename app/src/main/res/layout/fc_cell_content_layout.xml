@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <!-- content header line -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fc_bg_content_top"
+        android:paddingBottom="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="7dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/fc_order_id_mock"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/fc_price_mock"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/fc_menu_icon" />
+
+    </RelativeLayout>
+
+    <!-- content header image -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fc_head_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fc_head_image" />
+
+        <TextView
+            android:id="@+id/fc_head_image_left_text"
+            style="@style/fc_content_image_badge_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fc_head_image"
+            android:layout_alignStart="@id/fc_head_image"
+            android:layout_alignLeft="@id/fc_head_image"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:text="@string/fc_requests_count_mock" />
+
+        <TextView
+            style="@style/fc_content_image_badge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/fc_head_image_left_text"
+            android:layout_alignStart="@id/fc_head_image_left_text"
+            android:layout_alignLeft="@id/fc_head_image_left_text"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:text="@string/fc_requests_count_badge" />
+
+        <TextView
+            android:id="@+id/fc_head_image_right_text"
+            style="@style/fc_content_image_badge_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fc_head_image"
+            android:layout_alignEnd="@id/fc_head_image"
+            android:layout_alignRight="@id/fc_head_image"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/fc_weight_mock" />
+
+        <TextView
+            style="@style/fc_content_image_badge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/fc_head_image_right_text"
+            android:layout_alignStart="@id/fc_head_image_right_text"
+            android:layout_alignLeft="@id/fc_head_image_right_text"
+            android:text="@string/fc_weight_badge" />
+
+        <TextView
+            android:id="@+id/fc_head_image_center_text"
+            style="@style/fc_content_image_badge_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/fc_head_image"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp"
+            android:text="@string/fc_pledge_mock" />
+
+        <TextView
+            style="@style/fc_content_image_badge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/fc_head_image_center_text"
+            android:layout_alignStart="@id/fc_head_image_center_text"
+            android:layout_alignLeft="@id/fc_head_image_center_text"
+            android:text="@string/fc_pledge_badge" />
+
+
+    </RelativeLayout>
+
+    <!-- content body layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fc_bg_content"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="9dp">
+
+        <!-- avatar and name part -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/fc_content_avatar_title"
+                style="@style/fc_content_main_badge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:text="@string/fc_sender_badge" />
+
+            <ImageView
+                android:id="@+id/fc_content_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fc_content_avatar_title"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fc_avatar" />
+
+            <TextView
+                android:id="@+id/fc_content_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/fc_content_avatar"
+                android:layout_marginBottom="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/fc_content_avatar"
+                android:layout_toRightOf="@id/fc_content_avatar"
+                android:text="@string/fc_client_name_mock"
+                android:textColor="@color/fc_main_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/fc_content_rating_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/fc_content_name_view"
+                android:layout_alignLeft="@id/fc_content_name_view"
+                android:layout_below="@id/fc_content_name_view"
+                android:src="@drawable/fc_stars" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/fc_content_rating_stars"
+                android:layout_marginBottom="-2dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toEndOf="@id/fc_content_rating_stars"
+                android:layout_toRightOf="@id/fc_content_rating_stars"
+                android:text="@string/fc_rating_mock"
+                android:textColor="@color/fc_content_badge_title"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/fc_arrow" />
+
+        </RelativeLayout>
+
+        <!-- divider line -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="9dp"
+            android:src="@color/fc_content_divider_line" />
+
+        <!-- addresses part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fc_content_from_badge"
+                    style="@style/fc_content_main_badge_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/fc_from_badge" />
+
+                <TextView
+                    android:id="@+id/fc_content_from_address_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_from_badge"
+                    android:layout_alignLeft="@id/fc_content_from_badge"
+                    android:layout_below="@id/fc_content_from_badge"
+                    android:text="@string/fc_content_from1_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fc_content_from_address_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_from_address_1"
+                    android:layout_alignLeft="@id/fc_content_from_address_1"
+                    android:layout_below="@id/fc_content_from_address_1"
+                    android:text="@string/fc_content_from2_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fc_content_to_badge"
+                    style="@style/fc_content_main_badge_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/fc_to_badge" />
+
+                <TextView
+                    android:id="@+id/fc_content_to_address_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_to_badge"
+                    android:layout_alignLeft="@id/fc_content_to_badge"
+                    android:layout_below="@id/fc_content_to_badge"
+                    android:text="@string/fc_content_to1_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fc_content_to_address_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_to_address_1"
+                    android:layout_alignLeft="@id/fc_content_to_address_1"
+                    android:layout_below="@id/fc_content_to_address_1"
+                    android:text="@string/fc_content_to2_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/fc_arrow" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- divider line -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="7dp"
+            android:src="@color/fc_content_divider_line" />
+
+        <!-- dates part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fc_content_delivery_date_badge"
+                    style="@style/fc_content_main_badge_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/fc_delivery_date_badge" />
+
+                <TextView
+                    android:id="@+id/fc_content_delivery_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_delivery_date_badge"
+                    android:layout_alignLeft="@id/fc_content_delivery_date_badge"
+                    android:layout_below="@id/fc_content_delivery_date_badge"
+                    android:text="@string/fc_delivery_time_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fc_content_delivery_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_delivery_time"
+                    android:layout_alignLeft="@id/fc_content_delivery_time"
+                    android:layout_below="@id/fc_content_delivery_time"
+                    android:text="@string/fc_delivery_date_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fc_content_deadline_badge"
+                    style="@style/fc_content_main_badge_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/fc_deadline_badge" />
+
+                <TextView
+                    android:id="@+id/fc_content_deadline_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_deadline_badge"
+                    android:layout_alignLeft="@id/fc_content_deadline_badge"
+                    android:layout_below="@id/fc_content_deadline_badge"
+                    android:text="@string/fc_deadline_time_mock"
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fc_content_deadline_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/fc_content_deadline_time"
+                    android:layout_alignLeft="@id/fc_content_deadline_time"
+                    android:layout_below="@id/fc_content_deadline_time"
+                    android:text=""
+                    android:textColor="@color/fc_main_text_color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- request button -->
+        <TextView
+            android:id="@+id/fc_content_request_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/fc_btn_request"
+            android:padding="10dp"
+            android:text="@string/fc_request_btn_text"
+            android:textAlignment="center"
+            android:textColor="@color/fc_main_text_color"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/fc_btn_annotation_mock"
+            android:textAlignment="center"
+            android:textColor="@color/fc_content_badge_title"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

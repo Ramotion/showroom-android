@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sr_help_layout_bottom_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/sr_help_bottom_bar_bg">
+
+    <LinearLayout
+        android:id="@+id/sr_help_layout_bottom_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="@dimen/sr_screen_border_padding"
+        android:layout_marginRight="@dimen/sr_screen_border_padding"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/sr_facebook_icon"
+            android:contentDescription="@string/sr_bottom_bar_facebook_link" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/sr_dribble_icon"
+            android:contentDescription="@string/sr_bottom_bar_dribble_link" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/sr_instagram_icon"
+            android:contentDescription="@string/sr_bottom_bar_instagram_link" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/sr_twitter_icon"
+            android:contentDescription="@string/sr_bottom_bar_twitter_link" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/sr_github_icon"
+            android:contentDescription="@string/sr_bottom_bar_github_link" />
+
+    </LinearLayout>
+
+</FrameLayout>

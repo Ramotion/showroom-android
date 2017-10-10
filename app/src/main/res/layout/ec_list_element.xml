@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/ec_person_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:contentDescription="person icon" />
+
+    <TextView
+        android:id="@+id/ec_first_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ec_person_icon"
+        android:layout_toEndOf="@id/ec_person_icon"
+        android:layout_toRightOf="@id/ec_person_icon"
+        android:textAppearance="@style/ec_card_item_person_name" />
+
+    <TextView
+        android:id="@+id/ec_second_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/ec_first_line"
+        android:layout_alignStart="@id/ec_first_line"
+        android:layout_below="@id/ec_first_line"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/ec_person_icon"
+        android:layout_toRightOf="@id/ec_person_icon"
+        android:textAppearance="@style/ec_card_item_comment" />
+
+    <TextView
+        android:id="@+id/ec_first_line_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/ec_first_line"
+        android:text="07 mar 2017"
+        android:textAppearance="@style/ec_card_item_comment_date" />
+
+</RelativeLayout>

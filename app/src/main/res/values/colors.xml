@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sr_color_primary">#1863DC</color>
+    <color name="sr_color_primary_dark">#1451b4</color>
+    <color name="sr_color_accent">#ffffff</color>
+    <color name="sr_help_title_bg">#dcffffff</color>
+    <color name="sr_help_title_border">#bcf1f1f1</color>
+    <color name="sr_help_overlay_bg">#ffffff</color>
+    <color name="sr_btn_contact_bg">#1863DC</color>
+    <color name="sr_btn_contact_bg_click">#1c71f9</color>
+    <color name="sr_content_bg">#ffffff</color>
+    <color name="sr_main_text">#232323</color>
+    <color name="sr_slider_card_note_text">#a3a3a3</color>
+    <color name="sr_slider_position_counter">#b7b7b7</color>
+
+    <!-- Expanding Collection -->
+    <color name="ec_transparent">#00ffffff</color>
+    <color name="ec_color_primary">#2e2e2e</color>
+    <color name="ec_color_primary_dark">#1d1d1d</color>
+    <color name="ec_color_accent">#797979</color>
+    <color name="ec_bg_gradient_start">#000000</color>
+    <color name="ec_bg_gradient_end">#d8000000</color>
+    <color name="ec_bg_solid_dark">#55000000</color>
+    <color name="ec_head_gradient_start">#00ffffff</color>
+    <color name="ec_head_gradient_center">#00ffffff</color>
+    <color name="ec_head_gradient_end">#96000000</color>
+    <color name="ec_color_list_divider">#e6e6e6</color>
+
+    <!-- FOLDING CELL -->
+    <color name="fc_color_primary">#594691</color>
+    <color name="fc_color_primary_dark">#3e2d70</color>
+    <color name="fc_bg_back_side_color">#f4f0ff</color>
+    <color name="fc_bg_title_left">#594691</color>
+    <color name="fc_bg_title_right">#ffffff</color>
+    <color name="fc_bg_content_top">#594691</color>
+    <color name="fc_bg_content">#ffffff</color>
+    <color name="fc_content_divider_line">#e0e0e0</color>
+    <color name="fc_content_badge_title">#a9a9a9</color>
+    <color name="fc_title_badge_title">#adafb1</color>
+    <color name="fc_title_badge_text">#adafb1</color>
+    <color name="fc_main_text_color">#343d43</color>
+    <color name="fc_btn_request">#ffbf12</color>
+    <color name="fc_black_overlay">#66000000</color>
+
+    <!-- PAPER ONBOARDING -->
+    <color name="po_color_primary">#3F51B5</color>
+    <color name="po_color_primary_dark">#303F9F</color>
+    <color name="po_color_accent">#FF4081</color>
+
+</resources>

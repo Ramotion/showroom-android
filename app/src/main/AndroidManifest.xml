@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ramotion.showroom">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/sr_launcher"
+        android:label="@string/sr_app_name"
+        android:roundIcon="@mipmap/sr_launcher_round"
+        android:supportsRtl="true"
+        tools:replace="android:label">
+
+        <activity
+            android:name=".ShowroomActivity"
+            android:label="@string/sr_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/sr_app_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".examples.expandingcollection.ExpandingCollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ec_app_theme" />
+
+        <activity
+            android:name=".examples.foldingcell.FoldingCellActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/fc_app_theme" />
+
+        <activity
+            android:name=".examples.paperonboarding.PaperOnboardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/po_app_theme" />
+
+    </application>
+
+</manifest>
