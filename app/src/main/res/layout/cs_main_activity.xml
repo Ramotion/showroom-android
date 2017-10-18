@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="30dp">
+
+        <FrameLayout
+            android:id="@+id/cs_countries"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cs_frameLayout"
+            android:layout_toStartOf="@+id/cs_frameLayout">
+
+            <TextView
+                android:id="@+id/cs_tv_country_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cs_tv_country_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cs_frameLayout"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/cs_temperature_background">
+
+            <TextSwitcher
+                android:id="@+id/cs_ts_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cs_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginLeft="@dimen/cs_recycler_view_left_offset"
+        android:layout_marginStart="@dimen/cs_recycler_view_left_offset"
+        android:layout_marginTop="18dp"
+        android:clipChildren="false"
+        android:overScrollMode="never"
+        app:layoutManager="com.ramotion.cardslider.CardSliderLayoutManager"
+        app:viewUpdater="com.ramotion.showroom.examples.cardslider.cards.CardsUpdater" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cs_star" />
+
+        <TextSwitcher
+            android:id="@+id/cs_ts_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/cs_left_offset"
+            android:layout_marginStart="@dimen/cs_left_offset" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:animateLayoutChanges="true">
+
+        <ImageSwitcher
+            android:id="@+id/cs_ts_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/cs_gradient_top"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/cs_gradient_top"
+            android:background="@drawable/cs_gradient_map" />
+
+        <TextSwitcher
+            android:id="@+id/cs_ts_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="@dimen/cs_left_offset"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="@dimen/cs_left_offset" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cs_ts_description"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cs_clock" />
+
+            <TextSwitcher
+                android:id="@+id/cs_ts_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/cs_left_offset"
+                android:layout_marginStart="@dimen/cs_left_offset" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/cs_green_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:alpha="0.5"
+                android:background="@drawable/cs_green_dot_big" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:background="@drawable/cs_green_dot_small" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -147,6 +147,9 @@ public class ShowroomActivity extends AppCompatActivity {
 
         sliderCounterLabel.setText((sliderContainer.getSlider().getCurrentItem() + 1) + "/" + sliderAdapter.getCount());
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
         playInitialAnimations();
 
     }
@@ -334,6 +337,7 @@ public class ShowroomActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 animationsInProgress = false;
                 sliderContainer.getSlider().setDisabled(false);
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
             }
         });
 

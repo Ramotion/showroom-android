@@ -172,4 +172,35 @@
         <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
     </style>
 
+    <!-- CARD SLIDER -->
+    <style name="cs_app_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cs_color_primary</item>
+        <item name="colorPrimaryDark">@color/cs_color_primary_dark</item>
+        <item name="colorAccent">@color/cs_color_accent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
+    </style>
+
+    <style name="cs_temperature_text_view">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/cs_temperature_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="cs_place_text_view">
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="cs_clock_text_view">
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="cs_description_text_view">
+        <item name="android:textSize">15sp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
 </resources>

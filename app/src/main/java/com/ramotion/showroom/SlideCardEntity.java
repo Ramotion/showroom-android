@@ -1,5 +1,6 @@
 package com.ramotion.showroom;
 
+import com.ramotion.showroom.examples.cardslider.MainActivity;
 import com.ramotion.showroom.examples.expandingcollection.ExpandingCollectionActivity;
 import com.ramotion.showroom.examples.foldingcell.FoldingCellActivity;
 import com.ramotion.showroom.examples.paperonboarding.PaperOnboardingActivity;
@@ -159,7 +160,7 @@ public class SlideCardEntity {
 
         dataset.add(builder.withImageRes(R.drawable.sr_card_slider).withLink("https://github.com/Ramotion/cardslider-android")
                 .withTitle("Card Slider").withDescription("Card Slider is the controller that allows user to swipe through cards with pictures and accompanying descriptions.")
-                .withActivityClass(null).withTechNote("Java").withTimeNote("120 hours").build());
+                .withActivityClass(MainActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
         return dataset;
     }

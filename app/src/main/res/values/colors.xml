@@ -47,4 +47,19 @@
     <color name="po_color_primary_dark">#303F9F</color>
     <color name="po_color_accent">#FF4081</color>
 
+
+    <!-- CARD SLIDER -->
+    <color name="cs_color_primary">#3F51B5</color>
+    <color name="cs_color_primary_dark">#303F9F</color>
+    <color name="cs_color_accent">#FF4081</color>
+
+    <color name="cs_blue">#348af7</color>
+
+    <color name="cs_temperature_background">@color/cs_blue</color>
+    <color name="cs_temperature_text">@android:color/white</color>
+
+    <color name="cs_green_dot_big">@color/cs_blue</color>
+    <color name="cs_green_dot_small">@color/cs_blue</color>
+
+
 </resources>

@@ -6,4 +6,9 @@
     <dimen name="fc_activity_horizontal_margin">16dp</dimen>
     <dimen name="fc_activity_vertical_margin">16dp</dimen>
 
+    <dimen name="cs_recycler_view_left_offset">9dp</dimen>
+    <dimen name="cs_left_offset">61dp</dimen>
+    <dimen name="cs_card_width">148dp</dimen>
+    <dimen name="cs_card_corner_radius">10dp</dimen>
+
 </resources>

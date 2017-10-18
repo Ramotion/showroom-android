@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="cs_app_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cs_color_primary</item>
+        <item name="colorPrimaryDark">@color/cs_color_primary_dark</item>
+        <item name="colorAccent">@color/cs_color_accent</item>
+        <item name="android:colorBackground">@android:color/white</item>
+
+        <item name="android:windowContentTransitions">false</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/no_transition
+
+
+        </item>
+        <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
+
+    </style>
+</resources>
