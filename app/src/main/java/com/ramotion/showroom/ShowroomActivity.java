@@ -2,6 +2,8 @@ package com.ramotion.showroom;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
@@ -121,7 +123,7 @@ public class ShowroomActivity extends AppCompatActivity {
 
         // calculations for animation purposes
         globalPaddingPx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30, getResources().getDisplayMetrics());
-        helpButtonSizePx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25, getResources().getDisplayMetrics());
+        helpButtonSizePx = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 30, getResources().getDisplayMetrics());
         titleBtnHelpCenterX = (int) (screenWidthPx - globalPaddingPx - helpButtonSizePx / 2);
         titleBtnHelpCenterY = (int) (globalPaddingPx + helpButtonSizePx / 2);
 
@@ -184,20 +186,23 @@ public class ShowroomActivity extends AppCompatActivity {
         titleLayout.bringToFront();
         helpLayout.setVisibility(View.VISIBLE);
 
+        Animator showAnimation;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Animator circularReveal = ViewAnimationUtils.createCircularReveal(helpLayout, titleBtnHelpCenterX, titleBtnHelpCenterY, 0, screenDiagonalPx);
-            circularReveal.setInterpolator(new AccelerateInterpolator());
-            circularReveal.setDuration(250);
-            circularReveal.start();
-            circularReveal.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    mainLayout.setVisibility(View.GONE);
-                    animationsInProgress = false;
-                    helpLayoutShown = true;
-                }
-            });
+            showAnimation = ViewAnimationUtils.createCircularReveal(helpLayout, titleBtnHelpCenterX, titleBtnHelpCenterY, 0, screenDiagonalPx);
+        } else {
+            showAnimation = ObjectAnimator.ofFloat(helpLayout, "alpha", 0f, 1f);
         }
+        showAnimation.setInterpolator(new AccelerateInterpolator());
+        showAnimation.setDuration(250);
+        showAnimation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                mainLayout.setVisibility(View.GONE);
+                animationsInProgress = false;
+                helpLayoutShown = true;
+            }
+        });
+        showAnimation.start();
 
         int textMoveOffset = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 25, getResources().getDisplayMetrics());
 
@@ -233,21 +238,27 @@ public class ShowroomActivity extends AppCompatActivity {
         titleLayout.bringToFront();
         mainLayout.setVisibility(View.VISIBLE);
 
+        Animator hideAnimation;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Animator circularReveal = ViewAnimationUtils.createCircularReveal(helpLayout, titleBtnHelpCenterX, titleBtnHelpCenterY, screenDiagonalPx, 0);
-            circularReveal.setInterpolator(new AccelerateInterpolator());
-            circularReveal.setDuration(250);
-            circularReveal.start();
-            circularReveal.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    helpLayout.setVisibility(View.GONE);
-                    animationsInProgress = false;
-                    helpLayoutShown = false;
-                    helpLayoutScrollView.scrollTo(0, 0);
-                }
-            });
+            hideAnimation = ViewAnimationUtils.createCircularReveal(helpLayout, titleBtnHelpCenterX, titleBtnHelpCenterY, screenDiagonalPx, 0);
+        } else {
+            hideAnimation = ObjectAnimator.ofFloat(helpLayout, "alpha", 1f, 0f);
         }
+
+        hideAnimation.setInterpolator(new AccelerateInterpolator());
+        hideAnimation.setDuration(250);
+
+        hideAnimation.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                helpLayout.setVisibility(View.GONE);
+                animationsInProgress = false;
+                helpLayoutShown = false;
+                helpLayoutScrollView.scrollTo(0, 0);
+            }
+        });
+        hideAnimation.start();
+
     }
 
     // Straightforward code to tune all initial animations in one place
