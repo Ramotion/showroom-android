@@ -83,9 +83,9 @@
             android:layout_toRightOf="@id/fc_title_from_to_dots"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
-            android:maxLines="1"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:singleLine="true" />
 
         <ImageView
             android:id="@+id/fc_title_from_to_dots_divider"
@@ -107,9 +107,9 @@
             android:layout_toRightOf="@id/fc_title_from_to_dots"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
-            android:maxLines="1"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:singleLine="true" />
 
 
         <TextView
