@@ -58,12 +58,13 @@
             <!-- Time notes-->
             <ImageView
                 android:id="@+id/sr_slider_card_clock_icon"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:background="@color/sr_content_bg"
+                android:background="@android:color/holo_red_dark"
+
                 android:src="@drawable/sr_hours_icon" />
 
             <TextView
@@ -73,19 +74,20 @@
                 android:layout_alignBottom="@id/sr_slider_card_clock_icon"
                 android:layout_marginLeft="8dp"
                 android:layout_toRightOf="@id/sr_slider_card_clock_icon"
-                android:padding="1dp"
+                android:background="@android:color/holo_red_dark"
                 android:textAppearance="@style/sr_slider_card_note_text" />
 
             <!-- Tech notes-->
             <ImageView
                 android:id="@+id/sr_slider_card_gear_icon"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_above="@id/sr_slider_card_clock_icon"
                 android:layout_alignLeft="@id/sr_slider_card_clock_icon"
                 android:layout_alignStart="@id/sr_slider_card_clock_icon"
                 android:layout_marginBottom="10dp"
-                android:background="@color/sr_content_bg"
+                android:background="@android:color/holo_red_dark"
+
                 android:src="@drawable/sr_technology_icon" />
 
             <TextView
@@ -94,8 +96,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/sr_slider_card_gear_icon"
                 android:layout_marginLeft="8dp"
+                android:background="@android:color/holo_red_dark"
+
                 android:layout_toRightOf="@id/sr_slider_card_gear_icon"
-                android:padding="1dp"
                 android:textAppearance="@style/sr_slider_card_note_text" />
 
 

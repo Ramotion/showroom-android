@@ -3,8 +3,6 @@ package com.ramotion.showroom.examples.cardslider;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
-import android.app.ActivityOptions;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -14,7 +12,6 @@ import android.support.annotation.StyleRes;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
@@ -47,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private final String[] temperatures = {"21°C", "19°C", "17°C", "23°C", "20°C"};
     private final String[] times = {"Aug 1 - Dec 15    7:00-18:00", "Sep 5 - Nov 10    8:00-16:00", "Mar 8 - May 21    7:00-18:00"};
 
-    private final SliderAdapter sliderAdapter = new SliderAdapter(pics, 20, new OnCardClickListener());
+    private final SliderAdapter sliderAdapter = new SliderAdapter(pics, 20, null);
 
     private CardSliderLayoutManager layoutManger;
     private RecyclerView recyclerView;
@@ -325,39 +322,39 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private class OnCardClickListener implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-            final CardSliderLayoutManager lm = (CardSliderLayoutManager) recyclerView.getLayoutManager();
-
-            if (lm.isSmoothScrolling()) {
-                return;
-            }
-
-            final int activeCardPosition = lm.getActiveCardPosition();
-            if (activeCardPosition == RecyclerView.NO_POSITION) {
-                return;
-            }
-
-            final int clickedPosition = recyclerView.getChildAdapterPosition(view);
-            if (clickedPosition == activeCardPosition) {
-                final Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-                intent.putExtra(DetailsActivity.BUNDLE_IMAGE_ID, pics[activeCardPosition % pics.length]);
-
-                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-                    startActivity(intent);
-                } else {
-                    final CardView cardView = (CardView) view;
-                    final View sharedView = cardView.getChildAt(cardView.getChildCount() - 1);
-                    final ActivityOptions options = ActivityOptions
-                            .makeSceneTransitionAnimation(MainActivity.this, sharedView, "shared");
-                    startActivity(intent, options.toBundle());
-                }
-            } else if (clickedPosition > activeCardPosition) {
-                recyclerView.smoothScrollToPosition(clickedPosition);
-                onActiveCardChange(clickedPosition);
-            }
-        }
-    }
+//    private class OnCardClickListener implements View.OnClickListener {
+//        @Override
+//        public void onClick(View view) {
+//            final CardSliderLayoutManager lm = (CardSliderLayoutManager) recyclerView.getLayoutManager();
+//
+//            if (lm.isSmoothScrolling()) {
+//                return;
+//            }
+//
+//            final int activeCardPosition = lm.getActiveCardPosition();
+//            if (activeCardPosition == RecyclerView.NO_POSITION) {
+//                return;
+//            }
+//
+//            final int clickedPosition = recyclerView.getChildAdapterPosition(view);
+//            if (clickedPosition == activeCardPosition) {
+//                final Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+//                intent.putExtra(DetailsActivity.BUNDLE_IMAGE_ID, pics[activeCardPosition % pics.length]);
+//
+//                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+//                    startActivity(intent);
+//                } else {
+//                    final CardView cardView = (CardView) view;
+//                    final View sharedView = cardView.getChildAt(cardView.getChildCount() - 1);
+//                    final ActivityOptions options = ActivityOptions
+//                            .makeSceneTransitionAnimation(MainActivity.this, sharedView, "shared");
+//                    startActivity(intent, options.toBundle());
+//                }
+//            } else if (clickedPosition > activeCardPosition) {
+//                recyclerView.smoothScrollToPosition(clickedPosition);
+//                onActiveCardChange(clickedPosition);
+//            }
+//        }
+//    }
 
 }

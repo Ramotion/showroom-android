@@ -146,8 +146,8 @@ public class SlideCardEntity {
 
         Builder builder = new Builder();
 
-        dataset.add(builder.withImageRes(R.drawable.sr_folding_cell_img).withLink("https://github.com/Ramotion/folding-fc_cell-android")
-                .withTitle("Folding Cell").withDescription("An expanding content fc_cell inspired by folding paper material. It helps to navigate between cards in user interfaces.")
+        dataset.add(builder.withImageRes(R.drawable.sr_folding_cell_img).withLink("https://github.com/Ramotion/folding-cell-android")
+                .withTitle("Folding Cell").withDescription("An expanding content cell inspired by folding paper material. It helps to navigate between cards in user interfaces.")
                 .withActivityClass(FoldingCellActivity.class).withTechNote("Java").withTimeNote("160 hours").build());
 
         dataset.add(builder.withImageRes(R.drawable.sr_expanding_collection_img).withLink("https://github.com/Ramotion/expanding-collection-android")
