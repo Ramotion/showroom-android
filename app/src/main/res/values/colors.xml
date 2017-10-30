@@ -40,7 +40,6 @@
     <color name="fc_title_badge_text">#adafb1</color>
     <color name="fc_main_text_color">#343d43</color>
     <color name="fc_btn_request">#ffbf12</color>
-    <color name="fc_black_overlay">#66000000</color>
 
     <!-- PAPER ONBOARDING -->
     <color name="po_color_primary">#3F51B5</color>

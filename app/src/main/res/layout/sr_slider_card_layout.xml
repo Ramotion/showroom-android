@@ -18,92 +18,78 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop" />
 
-        <RelativeLayout
+        <!-- Slide Title -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="20dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="15dp">
-
-            <!-- Slide Title -->
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sr_slider_card_padding"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/sr_slider_card_title_text"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:singleLine="true"
                 android:textAppearance="@style/sr_slider_card_title_text" />
 
             <ImageButton
                 android:id="@+id/sr_slider_card_share_btn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
                 android:layout_margin="3dp"
                 android:background="@color/sr_content_bg"
                 android:src="@drawable/sr_share_icon" />
 
-            <!-- Slide description-->
-            <TextView
+        </LinearLayout>
+
+        <!-- Description-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/sr_slider_card_padding"
+            android:layout_marginEnd="@dimen/sr_slider_card_padding"
+            android:layout_marginStart="@dimen/sr_slider_card_padding"
+            android:layout_weight="1"
+            android:background="@android:color/transparent">
+
+            <com.ramotion.showroom.CustomTextView
                 android:id="@+id/sr_slider_card_description_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sr_slider_card_title_text"
-                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
                 android:textAppearance="@style/sr_slider_card_description_text" />
 
-            <!-- Time notes-->
-            <ImageView
-                android:id="@+id/sr_slider_card_clock_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:background="@android:color/holo_red_dark"
+        </FrameLayout>
 
-                android:src="@drawable/sr_hours_icon" />
+        <!--Time note-->
+        <TextView
+            android:id="@+id/sr_slider_card_time_note_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="@dimen/sr_slider_card_padding"
+            android:layout_marginStart="@dimen/sr_slider_card_padding"
+            android:background="@android:color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/sr_hours_icon"
+            android:textAppearance="@style/sr_slider_card_note_text" />
 
-            <TextView
-                android:id="@+id/sr_slider_card_time_note_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/sr_slider_card_clock_icon"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@id/sr_slider_card_clock_icon"
-                android:background="@android:color/holo_red_dark"
-                android:textAppearance="@style/sr_slider_card_note_text" />
-
-            <!-- Tech notes-->
-            <ImageView
-                android:id="@+id/sr_slider_card_gear_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/sr_slider_card_clock_icon"
-                android:layout_alignLeft="@id/sr_slider_card_clock_icon"
-                android:layout_alignStart="@id/sr_slider_card_clock_icon"
-                android:layout_marginBottom="10dp"
-                android:background="@android:color/holo_red_dark"
-
-                android:src="@drawable/sr_technology_icon" />
-
-            <TextView
-                android:id="@+id/sr_slider_card_tech_note_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/sr_slider_card_gear_icon"
-                android:layout_marginLeft="8dp"
-                android:background="@android:color/holo_red_dark"
-
-                android:layout_toRightOf="@id/sr_slider_card_gear_icon"
-                android:textAppearance="@style/sr_slider_card_note_text" />
-
-
-        </RelativeLayout>
-
+        <!-- Tech note-->
+        <TextView
+            android:id="@+id/sr_slider_card_tech_note_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sr_slider_card_padding"
+            android:layout_marginEnd="@dimen/sr_slider_card_padding"
+            android:layout_marginStart="@dimen/sr_slider_card_padding"
+            android:background="@android:color/transparent"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/sr_technology_icon"
+            android:textAppearance="@style/sr_slider_card_note_text" />
 
     </LinearLayout>
 

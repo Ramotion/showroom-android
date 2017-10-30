@@ -139,29 +139,29 @@
     <style name="fc_content_image_badge_title" parent="fc_app_theme">
         <item name="android:alpha">0.5</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">12dp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="fc_content_image_badge_text" parent="fc_app_theme">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
 
     </style>
 
     <style name="fc_content_main_badge_title" parent="fc_app_theme">
         <item name="android:textColor">@color/fc_content_badge_title</item>
-        <item name="android:textSize">12dp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="fc_title_badge_text" parent="fc_app_theme">
         <item name="android:textColor">@color/fc_title_badge_text</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="fc_title_badge_title" parent="fc_app_theme">
         <item name="android:textColor">@color/fc_title_badge_title</item>
-        <item name="android:textSize">12dp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <!-- PAPER ONBOARDING THEME -->

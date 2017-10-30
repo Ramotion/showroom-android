@@ -40,7 +40,7 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
     public Object instantiateItem(final ViewGroup container, int position) {
         final SlideCardEntity dataEntity = dataset.get(position);
 
-        CardView cardLayout = (CardView) inflater.inflate(R.layout.sr_slider_card_layout, null);
+        CardView cardLayout = (CardView) inflater.inflate(R.layout.sr_slider_card_layout, container, false);
 
         ImageView headImageView = (ImageView) cardLayout.findViewById(R.id.sr_slider_card_image);
         headImageView.setImageResource(dataEntity.getImageRes());
