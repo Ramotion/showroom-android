@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:textAppearance="@style/ec_card_head_title" />
+        android:textAppearance="@style/EcCardHeadTitle" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
             android:layout_alignTop="@id/ec_avatar"
             android:layout_toEndOf="@id/ec_avatar"
             android:layout_toRightOf="@id/ec_avatar"
-            android:textAppearance="@style/ec_card_item_person_name" />
+            android:textAppearance="@style/EcCardItemPersonName" />
 
         <TextView
             android:id="@+id/ec_message"
@@ -44,7 +44,7 @@
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/ec_avatar"
             android:layout_toRightOf="@id/ec_avatar"
-            android:textAppearance="@style/ec_card_item_comment" />
+            android:textAppearance="@style/EcCardItemComment" />
 
         <LinearLayout
             android:layout_width="match_parent"

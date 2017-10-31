@@ -41,9 +41,9 @@ public class ItemsCountView extends LinearLayout {
 
         textView = new TextView(context);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            textView.setTextAppearance(R.style.ec_position_indicator);
+            textView.setTextAppearance(R.style.EcPositionIndicator);
         } else {
-            textView.setTextAppearance(context, R.style.ec_position_indicator);
+            textView.setTextAppearance(context, R.style.EcPositionIndicator);
         }
 
         addView(textView, new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -52,9 +52,9 @@ public class ItemsCountView extends LinearLayout {
     private TextView createViewForTextSwitcher(Context context) {
         TextView textView = new TextView(context);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            textView.setTextAppearance(R.style.ec_position_indicator_current);
+            textView.setTextAppearance(R.style.EcPositionIndicatorCurrent);
         } else {
-            textView.setTextAppearance(context, R.style.ec_position_indicator_current);
+            textView.setTextAppearance(context, R.style.EcPositionIndicatorCurrent);
         }
         textView.setLayoutParams(new TextSwitcher.LayoutParams(TextSwitcher.LayoutParams.WRAP_CONTENT, TextSwitcher.LayoutParams.WRAP_CONTENT));
         return textView;

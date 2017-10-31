@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/sr_help_layout_text_header"
-            style="@style/sr_help_overlay_text_title"
+            style="@style/SrHelpOverlayTextTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
@@ -23,7 +23,7 @@
 
         <TextView
             android:id="@+id/sr_help_layout_text_content"
-            style="@style/sr_help_overlay_text"
+            style="@style/SrHelpOverlayText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="70dp"

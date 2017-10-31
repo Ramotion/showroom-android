@@ -41,7 +41,7 @@
 
             <ImageView
                 android:id="@+id/sr_title_text"
-                style="@style/sr_title_brand_text"
+                style="@style/SrTitleBrandText"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
@@ -86,7 +86,7 @@
 
         <TextView
             android:id="@+id/sr_slider_position_counter"
-            style="@style/sr_slider_position_counter"
+            style="@style/SrSliderPositionCounter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -97,7 +97,7 @@
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/sr_btn_contact"
-            style="@style/sr_button_style"
+            style="@style/SrButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginBottom="@dimen/sr_screen_border_padding"

@@ -112,21 +112,21 @@ public class CardSliderActivity extends AppCompatActivity {
 
     private void initSwitchers() {
         temperatureSwitcher = (TextSwitcher) findViewById(R.id.cs_ts_temperature);
-        temperatureSwitcher.setFactory(new TextViewFactory(R.style.cs_temperature_text_view, true));
+        temperatureSwitcher.setFactory(new TextViewFactory(R.style.CsTemperatureTextView, true));
         temperatureSwitcher.setCurrentText(temperatures[0]);
 
         placeSwitcher = (TextSwitcher) findViewById(R.id.cs_ts_place);
-        placeSwitcher.setFactory(new TextViewFactory(R.style.cs_place_text_view, false));
+        placeSwitcher.setFactory(new TextViewFactory(R.style.CsPlaceTextView, false));
         placeSwitcher.setCurrentText(places[0]);
 
         clockSwitcher = (TextSwitcher) findViewById(R.id.cs_ts_clock);
-        clockSwitcher.setFactory(new TextViewFactory(R.style.cs_clock_text_view, false));
+        clockSwitcher.setFactory(new TextViewFactory(R.style.CsClockTextView, false));
         clockSwitcher.setCurrentText(times[0]);
 
         descriptionsSwitcher = (TextSwitcher) findViewById(R.id.cs_ts_description);
         descriptionsSwitcher.setInAnimation(this, android.R.anim.fade_in);
         descriptionsSwitcher.setOutAnimation(this, android.R.anim.fade_out);
-        descriptionsSwitcher.setFactory(new TextViewFactory(R.style.cs_description_text_view, false));
+        descriptionsSwitcher.setFactory(new TextViewFactory(R.style.CsDescriptionTextView, false));
         descriptionsSwitcher.setCurrentText(getString(descriptions[0]));
 
         mapSwitcher = (ImageSwitcher) findViewById(R.id.cs_ts_map);

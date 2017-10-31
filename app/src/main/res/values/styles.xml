@@ -1,13 +1,13 @@
 <resources>
 
-    <style name="sr_activity_animations">
+    <style name="SrActivityAnimations">
         <item name="android:activityOpenEnterAnimation">@anim/sr_fade_in</item>
         <item name="android:activityOpenExitAnimation">@anim/sr_fade_out_with_scale</item>
         <item name="android:activityCloseEnterAnimation">@anim/sr_fade_in</item>
         <item name="android:activityCloseExitAnimation">@anim/sr_fade_out_with_scale</item>
     </style>
 
-    <style name="examples_activity_animations">
+    <style name="SrExamplesActivityAnimations">
         <item name="android:activityOpenEnterAnimation">@anim/sr_fade_in_with_scale</item>
         <item name="android:activityOpenExitAnimation">@anim/sr_fade_out</item>
         <item name="android:activityCloseEnterAnimation">@anim/sr_fade_in_with_scale</item>
@@ -15,56 +15,56 @@
     </style>
 
     <!-- SHOWROOM THEMES -->
-    <style name="sr_app_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="SrAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/sr_color_primary</item>
         <item name="colorPrimaryDark">@color/sr_color_primary_dark</item>
         <item name="colorAccent">@color/sr_color_accent</item>
-        <item name="android:windowAnimationStyle">@style/sr_activity_animations</item>
+        <item name="android:windowAnimationStyle">@style/SrActivityAnimations</item>
     </style>
 
-    <style name="sr_button_style" parent="Widget.AppCompat.Button.Borderless">
+    <style name="SrButtonStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">18sp</item>
     </style>
 
-    <style name="sr_slider_position_counter">
+    <style name="SrSliderPositionCounter">
         <item name="android:textColor">@color/sr_slider_position_counter</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="sr_title_brand_text">
+    <style name="SrTitleBrandText">
         <item name="android:textColor">@color/sr_main_text</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textScaleX">1.1</item>
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="sr_help_overlay_text">
+    <style name="SrHelpOverlayText">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/sr_main_text</item>
         <item name="android:textStyle">normal</item>
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="sr_help_overlay_text_title" parent="sr_help_overlay_text">
+    <style name="SrHelpOverlayTextTitle" parent="SrHelpOverlayText">
         <item name="android:textSize">34sp</item>
         <item name="android:textColor">@color/sr_main_text</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="sr_slider_card_description_text">
+    <style name="SrSliderCardDescriptionText">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/sr_main_text</item>
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="sr_slider_card_title_text">
+    <style name="SrSliderCardTitleText">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/sr_main_text</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="sr_slider_card_note_text">
+    <style name="SrSliderCardNoteText">
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/sr_slider_card_note_text</item>
@@ -72,15 +72,14 @@
 
 
     <!-- EXPANDING COLLECTION THEMES -->
-
-    <style name="ec_app_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="EcAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/ec_color_primary</item>
         <item name="colorPrimaryDark">@color/ec_color_primary_dark</item>
         <item name="colorAccent">@color/ec_color_accent</item>
-        <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
     </style>
 
-    <style name="ec_card_head_title">
+    <style name="EcCardHeadTitle">
         <item name="android:textColor">#ffffffff</item>
         <item name="android:textSize">22sp</item>
         <item name="android:shadowColor">#000000</item>
@@ -91,21 +90,21 @@
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="ec_card_item_person_name">
+    <style name="EcCardItemPersonName">
         <item name="android:textColor">#313131</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold|italic</item>
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="ec_card_item_comment">
+    <style name="EcCardItemComment">
         <item name="android:textColor">#787878</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">italic</item>
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="ec_card_item_comment_date">
+    <style name="EcCardItemCommentDate">
         <item name="android:textColor">#d6d6d6</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textAllCaps">true</item>
@@ -113,98 +112,95 @@
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="ec_position_indicator">
+    <style name="EcPositionIndicator">
         <item name="android:textColor">#8cffffff</item>
         <item name="android:textSize">66sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:typeface">normal</item>
     </style>
 
-    <style name="ec_position_indicator_current" parent="ec_position_indicator">
+    <style name="EcPositionIndicatorCurrent" parent="EcPositionIndicator">
         <item name="android:textColor">#ffffff</item>
     </style>
 
 
     <!-- FOLDING CELL THEMES -->
-
-    <style name="fc_app_theme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="FcAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/fc_color_primary</item>
         <item name="colorPrimaryDark">@color/fc_color_primary_dark</item>
         <item name="android:typeface">sans</item>
-        <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
 
     </style>
 
-    <style name="fc_content_image_badge_title" parent="fc_app_theme">
+    <style name="FcContentImageBadgeTitle" parent="FcAppTheme">
         <item name="android:alpha">0.5</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="fc_content_image_badge_text" parent="fc_app_theme">
+    <style name="FcContentImageBadgeText" parent="FcAppTheme">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
 
     </style>
 
-    <style name="fc_content_main_badge_title" parent="fc_app_theme">
+    <style name="FcContentMainBadgeTitle" parent="FcAppTheme">
         <item name="android:textColor">@color/fc_content_badge_title</item>
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="fc_title_badge_text" parent="fc_app_theme">
+    <style name="FcTitleBadgeText" parent="FcAppTheme">
         <item name="android:textColor">@color/fc_title_badge_text</item>
         <item name="android:textSize">20sp</item>
     </style>
 
-    <style name="fc_title_badge_title" parent="fc_app_theme">
+    <style name="FcTitleBadgeTitle" parent="FcAppTheme">
         <item name="android:textColor">@color/fc_title_badge_title</item>
         <item name="android:textSize">12sp</item>
     </style>
 
     <!-- PAPER ONBOARDING THEME -->
-    <style name="po_app_theme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="PoAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/po_color_primary</item>
         <item name="colorPrimaryDark">@color/po_color_primary_dark</item>
         <item name="colorAccent">@color/po_color_accent</item>
-        <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
     </style>
 
     <!-- CARD SLIDER -->
-    <style name="cs_app_theme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="CsAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/cs_color_primary</item>
         <item name="colorPrimaryDark">@color/cs_color_primary_dark</item>
         <item name="colorAccent">@color/cs_color_accent</item>
         <item name="android:windowBackground">@android:color/white</item>
-        <item name="android:windowAnimationStyle">@style/examples_activity_animations</item>
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
     </style>
 
-    <style name="cs_temperature_text_view">
+    <style name="CsTemperatureTextView">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/cs_temperature_text</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="cs_place_text_view">
+    <style name="CsPlaceTextView">
         <item name="android:textSize">24sp</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="cs_clock_text_view">
+    <style name="CsClockTextView">
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="cs_description_text_view">
+    <style name="CsDescriptionTextView">
         <item name="android:textSize">15sp</item>
         <item name="android:maxLines">2</item>
         <item name="android:ellipsize">end</item>
     </style>
 
     <!-- GARLAND VIEW -->
-
     <style name="GvAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/gv_color_primary</item>
         <item name="colorPrimaryDark">@color/gv_color_primary_dark</item>

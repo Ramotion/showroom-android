@@ -19,7 +19,7 @@
             android:name=".ShowroomActivity"
             android:label="@string/sr_app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/sr_app_theme">
+            android:theme="@style/SrAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -30,22 +30,22 @@
         <activity
             android:name=".examples.expandingcollection.ExpandingCollectionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ec_app_theme" />
+            android:theme="@style/EcAppTheme" />
 
         <activity
             android:name=".examples.foldingcell.FoldingCellActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/fc_app_theme" />
+            android:theme="@style/FcAppTheme" />
 
         <activity
             android:name=".examples.paperonboarding.PaperOnboardingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/po_app_theme" />
+            android:theme="@style/PoAppTheme" />
 
         <activity
             android:name=".examples.cardslider.CardSliderActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/cs_app_theme" />
+            android:theme="@style/CsAppTheme" />
 
 
         <activity

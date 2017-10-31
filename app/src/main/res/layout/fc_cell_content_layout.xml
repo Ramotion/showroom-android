@@ -57,7 +57,7 @@
 
         <TextView
             android:id="@+id/fc_head_image_left_text"
-            style="@style/fc_content_image_badge_text"
+            style="@style/FcContentImageBadgeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/fc_head_image"
@@ -69,7 +69,7 @@
             android:text="@string/fc_requests_count_mock" />
 
         <TextView
-            style="@style/fc_content_image_badge_title"
+            style="@style/FcContentImageBadgeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/fc_head_image_left_text"
@@ -81,7 +81,7 @@
 
         <TextView
             android:id="@+id/fc_head_image_right_text"
-            style="@style/fc_content_image_badge_text"
+            style="@style/FcContentImageBadgeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/fc_head_image"
@@ -93,7 +93,7 @@
             android:text="@string/fc_weight_mock" />
 
         <TextView
-            style="@style/fc_content_image_badge_title"
+            style="@style/FcContentImageBadgeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/fc_head_image_right_text"
@@ -103,7 +103,7 @@
 
         <TextView
             android:id="@+id/fc_head_image_center_text"
-            style="@style/fc_content_image_badge_text"
+            style="@style/FcContentImageBadgeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/fc_head_image"
@@ -112,7 +112,7 @@
             android:text="@string/fc_pledge_mock" />
 
         <TextView
-            style="@style/fc_content_image_badge_title"
+            style="@style/FcContentImageBadgeTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/fc_head_image_center_text"
@@ -141,7 +141,7 @@
 
             <TextView
                 android:id="@+id/fc_content_avatar_title"
-                style="@style/fc_content_main_badge_title"
+                style="@style/FcContentMainBadgeTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -226,7 +226,7 @@
 
                 <TextView
                     android:id="@+id/fc_content_from_badge"
-                    style="@style/fc_content_main_badge_title"
+                    style="@style/FcContentMainBadgeTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -265,7 +265,7 @@
 
                 <TextView
                     android:id="@+id/fc_content_to_badge"
-                    style="@style/fc_content_main_badge_title"
+                    style="@style/FcContentMainBadgeTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -328,7 +328,7 @@
 
                 <TextView
                     android:id="@+id/fc_content_delivery_date_badge"
-                    style="@style/fc_content_main_badge_title"
+                    style="@style/FcContentMainBadgeTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -367,7 +367,7 @@
 
                 <TextView
                     android:id="@+id/fc_content_deadline_badge"
-                    style="@style/fc_content_main_badge_title"
+                    style="@style/FcContentMainBadgeTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"

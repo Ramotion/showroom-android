@@ -34,7 +34,7 @@
                 android:layout_weight="1"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:textAppearance="@style/sr_slider_card_title_text" />
+                android:textAppearance="@style/SrSliderCardTitleText" />
 
             <ImageButton
                 android:id="@+id/sr_slider_card_share_btn"
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:textAppearance="@style/sr_slider_card_description_text" />
+                android:textAppearance="@style/SrSliderCardDescriptionText" />
 
         </FrameLayout>
 
@@ -76,7 +76,7 @@
             android:background="@android:color/transparent"
             android:drawablePadding="10dp"
             android:drawableStart="@drawable/sr_hours_icon"
-            android:textAppearance="@style/sr_slider_card_note_text" />
+            android:textAppearance="@style/SrSliderCardNoteText" />
 
         <!-- Tech note-->
         <TextView
@@ -89,7 +89,7 @@
             android:background="@android:color/transparent"
             android:drawablePadding="10dp"
             android:drawableStart="@drawable/sr_technology_icon"
-            android:textAppearance="@style/sr_slider_card_note_text" />
+            android:textAppearance="@style/SrSliderCardNoteText" />
 
     </LinearLayout>
 
