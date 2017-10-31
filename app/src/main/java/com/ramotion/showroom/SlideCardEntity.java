@@ -162,6 +162,10 @@ public class SlideCardEntity {
                 .withTitle("Card Slider").withDescription("Card Slider is the controller that allows user to swipe through cards with pictures and accompanying descriptions.")
                 .withActivityClass(MainActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
+        dataset.add(builder.withImageRes(R.drawable.sr_card_slider).withLink("https://github.com/Ramotion/garland-view-android")
+                .withTitle("Garland View").withDescription("Garland View is .....")
+                .withActivityClass(com.ramotion.showroom.examples.garlandview.main.MainActivity.class).withTechNote("Java").withTimeNote("200 hours").build());
+
         return dataset;
     }
 }

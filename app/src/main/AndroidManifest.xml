@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.ramotion.showroom">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -44,6 +46,22 @@
             android:name=".examples.cardslider.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/cs_app_theme" />
+
+
+        <activity
+            android:name=".examples.garlandview.main.MainActivity"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".examples.garlandview.details.DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".examples.garlandview.profile.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
     </application>
 
