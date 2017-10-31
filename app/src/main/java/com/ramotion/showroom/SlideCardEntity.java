@@ -1,8 +1,9 @@
 package com.ramotion.showroom;
 
+import com.ramotion.showroom.examples.cardslider.CardSliderActivity;
 import com.ramotion.showroom.examples.expandingcollection.ExpandingCollectionActivity;
 import com.ramotion.showroom.examples.foldingcell.FoldingCellActivity;
-import com.ramotion.showroom.examples.garlandview.main.MainActivity;
+import com.ramotion.showroom.examples.garlandview.main.GarlandViewMainActivity;
 import com.ramotion.showroom.examples.paperonboarding.PaperOnboardingActivity;
 
 import java.util.ArrayList;
@@ -160,11 +161,11 @@ public class SlideCardEntity {
 
         dataset.add(builder.withImageRes(R.drawable.sr_card_slider).withLink("https://github.com/Ramotion/cardslider-android")
                 .withTitle("Card Slider").withDescription("Card Slider is the controller that allows user to swipe through cards with pictures and accompanying descriptions.")
-                .withActivityClass(MainActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
+                .withActivityClass(CardSliderActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
         dataset.add(builder.withImageRes(R.drawable.sr_garland_view).withLink("https://github.com/Ramotion/garland-view-android")
                 .withTitle("Garland View").withDescription("Garland View is .....")
-                .withActivityClass(com.ramotion.showroom.examples.garlandview.main.MainActivity.class).withTechNote("Java").withTimeNote("200 hours").build());
+                .withActivityClass(GarlandViewMainActivity.class).withTechNote("Java").withTimeNote("200 hours").build());
 
         return dataset;
     }

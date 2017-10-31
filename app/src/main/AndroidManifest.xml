@@ -49,17 +49,17 @@
 
 
         <activity
-            android:name=".examples.garlandview.main.MainActivity"
+            android:name=".examples.garlandview.main.GarlandViewMainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/GvAppTheme.NoActionBar" />
 
         <activity
-            android:name=".examples.garlandview.details.DetailsActivity"
+            android:name=".examples.garlandview.details.GarlandViewDetailsActivity"
             android:label="@string/gv_title_activity_details"
             android:theme="@style/GvAppTheme.NoActionBar" />
 
         <activity
-            android:name=".examples.garlandview.profile.ProfileActivity"
+            android:name=".examples.garlandview.profile.GarlandViewProfileActivity"
             android:theme="@style/GvAppTheme.NoActionBar" />
 
     </application>
