@@ -12,12 +12,12 @@
             android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:background="@color/backgroundTop" />
+            android:background="@color/gv_background_top" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/backgroundBottom" />
+            android:background="@color/gv_background_bottom" />
 
     </LinearLayout>
 
@@ -48,7 +48,7 @@
             android:layout_marginTop="8dp"
             android:textColor="@android:color/black"
             android:textSize="14sp"
-            android:text="@string/initializing_faker" />
+            android:text="@string/gv_initializing_faker" />
 
     </LinearLayout>
 

@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements GarlandApp.FakerR
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.gv_activity_main);
 
         ((GarlandApp) getApplication()).addListener(this);
     }

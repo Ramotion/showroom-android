@@ -13,15 +13,15 @@
     <FrameLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/inner_item_height">
+        android:layout_height="@dimen/gv_inner_item_height">
 
-        <include layout="@layout/outer_header" />
+        <include layout="@layout/gv_outer_header" />
 
         <View
             android:id="@+id/header_alpha"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/white_corners"
+            android:background="@drawable/gv_white_corners"
             android:alpha="0" />
 
     </FrameLayout>

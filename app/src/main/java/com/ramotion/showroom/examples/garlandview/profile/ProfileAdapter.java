@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.ramotion.showroom.R;
-import com.ramotion.showroom.databinding.ProfileItemBinding;
+import com.ramotion.showroom.databinding.GvProfileItemBinding;
 import com.ramotion.showroom.examples.garlandview.details.DetailsData;
 
 import java.util.List;
@@ -24,7 +24,7 @@ class ProfileAdapter extends RecyclerView.Adapter<ProfileItem> {
     @Override
     public ProfileItem onCreateViewHolder(ViewGroup parent, int viewType) {
         final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        final ProfileItemBinding binding = DataBindingUtil.inflate(inflater, R.layout.profile_item, parent, false);
+        final GvProfileItemBinding binding = DataBindingUtil.inflate(inflater, R.layout.gv_profile_item, parent, false);
         return new ProfileItem(binding.getRoot());
     }
 

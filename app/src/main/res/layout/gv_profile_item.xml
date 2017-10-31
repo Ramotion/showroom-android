@@ -37,8 +37,8 @@
                     android:maxLines="2"
                     android:ellipsize="end"
                     app:font='@{"SF-UI-Display-Semibold.ttf"}'
-                    android:textSize="@dimen/item_name_text_size"
-                    android:textColor="@color/details_item_header" />
+                    android:textSize="@dimen/gv_item_name_text_size"
+                    android:textColor="@color/gv_details_item_header" />
 
                 <TextView
                     android:id="@+id/tv_text"
@@ -47,8 +47,8 @@
                     android:maxLines="2"
                     android:ellipsize="end"
                     app:font='@{"SF-UI-Display-Regular.ttf"}'
-                    android:textSize="@dimen/item_info_text_size"
-                    android:textColor="@color/details_item_text" />
+                    android:textSize="@dimen/gv_item_info_text_size"
+                    android:textColor="@color/gv_details_item_text" />
 
             </LinearLayout>
 
@@ -57,7 +57,7 @@
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:alpha="0.5"
-                android:background="@color/item_separator_color"
+                android:background="@color/gv_item_separator_color"
                 android:layout_marginRight="0dp"
                 app:layout_constraintRight_toRightOf="@+id/linearLayout"
                 android:layout_marginLeft="0dp"
@@ -69,9 +69,9 @@
                 android:id="@+id/tv_connect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/connect"
-                android:textColor="@color/header_green"
-                android:textSize="@dimen/item_footer_text_size"
+                android:text="@string/gv_connect"
+                android:textColor="@color/gv_header_green"
+                android:textSize="@dimen/gv_item_footer_text_size"
                 app:font='@{"SF-UI-Display-Semibold.ttf"}'
                 android:layout_marginLeft="0dp"
                 app:layout_constraintLeft_toLeftOf="@+id/line"
@@ -82,8 +82,8 @@
 
             <ImageView
                 android:id="@+id/view2"
-                android:layout_width="@dimen/item_icon_size"
-                android:layout_height="@dimen/item_icon_size"
+                android:layout_width="@dimen/gv_item_icon_size"
+                android:layout_height="@dimen/gv_item_icon_size"
                 android:src="@drawable/ic_comment"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 android:layout_marginTop="0dp"
@@ -93,8 +93,8 @@
                 app:layout_constraintRight_toRightOf="@+id/line" />
 
             <ImageView
-                android:layout_width="@dimen/item_icon_size"
-                android:layout_height="@dimen/item_icon_size"
+                android:layout_width="@dimen/gv_item_icon_size"
+                android:layout_height="@dimen/gv_item_icon_size"
                 android:src="@drawable/ic_like"
                 android:id="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/tv_connect"

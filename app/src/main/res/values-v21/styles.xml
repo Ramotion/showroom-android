@@ -15,17 +15,18 @@
     </style>
 
     <!-- GARLAND VIEW -->
-    <style name="AppTheme.NoActionBar">
+    <style name="GvAppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowEnterTransition">@transition/details_transition</item>
-        <item name="android:windowExitTransition">@transition/details_transition</item>
-        <item name="android:windowSharedElementEnterTransition">@transition/details_transition
+        <item name="android:windowEnterTransition">@transition/gv_details_transition</item>
+        <item name="android:windowExitTransition">@transition/gv_details_transition</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/gv_details_transition
         </item>
-        <item name="android:windowSharedElementExitTransition">@transition/details_transition</item>
-        <item name="android:windowBackground">@color/colorPrimary</item>
-        <item name="android:navigationBarColor">@color/colorPrimary</item>
+        <item name="android:windowSharedElementExitTransition">@transition/gv_details_transition
+        </item>
+        <item name="android:windowBackground">@color/gv_color_primary</item>
+        <item name="android:navigationBarColor">@color/gv_color_primary</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 

@@ -33,7 +33,7 @@ import com.ramotion.showroom.examples.cardslider.utils.DecodeBitmapTask;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class CardSliderActivity extends AppCompatActivity {
 
     private final int[][] dotCoords = new int[5][2];
     private final int[] pics = {R.drawable.cs_p1, R.drawable.cs_p2, R.drawable.cs_p3, R.drawable.cs_p4, R.drawable.cs_p5};
@@ -237,16 +237,16 @@ public class MainActivity extends AppCompatActivity {
 
         setCountryText(countries[pos % countries.length], left2right);
 
-        temperatureSwitcher.setInAnimation(MainActivity.this, animH[0]);
-        temperatureSwitcher.setOutAnimation(MainActivity.this, animH[1]);
+        temperatureSwitcher.setInAnimation(CardSliderActivity.this, animH[0]);
+        temperatureSwitcher.setOutAnimation(CardSliderActivity.this, animH[1]);
         temperatureSwitcher.setText(temperatures[pos % temperatures.length]);
 
-        placeSwitcher.setInAnimation(MainActivity.this, animV[0]);
-        placeSwitcher.setOutAnimation(MainActivity.this, animV[1]);
+        placeSwitcher.setInAnimation(CardSliderActivity.this, animV[0]);
+        placeSwitcher.setOutAnimation(CardSliderActivity.this, animV[1]);
         placeSwitcher.setText(places[pos % places.length]);
 
-        clockSwitcher.setInAnimation(MainActivity.this, animV[0]);
-        clockSwitcher.setOutAnimation(MainActivity.this, animV[1]);
+        clockSwitcher.setInAnimation(CardSliderActivity.this, animV[0]);
+        clockSwitcher.setOutAnimation(CardSliderActivity.this, animV[1]);
         clockSwitcher.setText(times[pos % times.length]);
 
         descriptionsSwitcher.setText(getString(descriptions[pos % descriptions.length]));
@@ -292,14 +292,14 @@ public class MainActivity extends AppCompatActivity {
         @SuppressWarnings("deprecation")
         @Override
         public View makeView() {
-            final TextView textView = new TextView(MainActivity.this);
+            final TextView textView = new TextView(CardSliderActivity.this);
 
             if (center) {
                 textView.setGravity(Gravity.CENTER);
             }
 
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-                textView.setTextAppearance(MainActivity.this, styleId);
+                textView.setTextAppearance(CardSliderActivity.this, styleId);
             } else {
                 textView.setTextAppearance(styleId);
             }
@@ -312,7 +312,7 @@ public class MainActivity extends AppCompatActivity {
     private class ImageViewFactory implements ViewSwitcher.ViewFactory {
         @Override
         public View makeView() {
-            final ImageView imageView = new ImageView(MainActivity.this);
+            final ImageView imageView = new ImageView(CardSliderActivity.this);
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
             final LayoutParams lp = new ImageSwitcher.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);

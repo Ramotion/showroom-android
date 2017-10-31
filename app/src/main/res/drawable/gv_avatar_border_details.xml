@@ -3,6 +3,6 @@
     android:shape="oval">
     <solid android:color="@android:color/white" />
     <stroke
-        android:color="@color/header_green"
-        android:width="@dimen/details_avatar_border" />
+        android:color="@color/gv_header_green"
+        android:width="@dimen/gv_details_avatar_border" />
 </shape>

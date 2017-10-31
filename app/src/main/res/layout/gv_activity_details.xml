@@ -11,7 +11,7 @@
             android:layout_height="0dp"
             android:src="@drawable/details_top_background"
             android:scaleType="centerCrop"
-            android:transitionName="@string/transition_background"
+            android:transitionName="@string/gv_transition_background"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/tv_name"
@@ -21,7 +21,7 @@
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/details_image_gradient"
+            android:background="@drawable/gv_details_image_gradient"
             app:layout_constraintRight_toRightOf="@+id/iv_background"
             app:layout_constraintLeft_toLeftOf="@+id/iv_background"
             app:layout_constraintBottom_toBottomOf="@+id/iv_background"
@@ -35,8 +35,8 @@
             android:layout_marginBottom="80dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
-            android:background="@drawable/white_corners"
-            android:transitionName="@string/transition_card"
+            android:background="@drawable/gv_white_corners"
+            android:transitionName="@string/gv_transition_card"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -46,10 +46,10 @@
             android:layout_marginEnd="32dp" />
 
         <FrameLayout
-            android:transitionName="@string/transition_avatar_border"
+            android:transitionName="@string/gv_transition_avatar_border"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/avatar_border_details"
+            android:background="@drawable/gv_avatar_border_details"
             android:layout_centerVertical="true"
             android:id="@+id/frameLayout"
             android:layout_marginLeft="8dp"
@@ -65,7 +65,7 @@
                 android:id="@+id/avatar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/details_avatar_border"
+                android:layout_margin="@dimen/gv_details_avatar_border"
                 android:scaleType="centerCrop"
                 android:layout_gravity="center" />
 
@@ -79,7 +79,7 @@
             android:textSize="24sp"
             android:maxLines="1"
             android:ellipsize="end"
-            android:textColor="@color/details_name_color"
+            android:textColor="@color/gv_details_name_color"
             android:layout_marginTop="16dp"
             app:font='@{"SF-UI-Display-Regular.ttf"}'
             app:layout_constraintTop_toBottomOf="@+id/frameLayout"
@@ -95,7 +95,7 @@
             android:textSize="17sp"
             android:maxLines="1"
             android:ellipsize="end"
-            android:textColor="@color/details_info_color"
+            android:textColor="@color/gv_details_info_color"
             app:font='@{"SF-UI-Display-Regular.ttf"}'
             android:gravity="center"
             android:layout_marginTop="8dp"
@@ -116,7 +116,7 @@
             android:maxLines="2"
             android:ellipsize="end"
             android:gravity="center"
-            android:textColor="@color/details_status_color"
+            android:textColor="@color/gv_details_status_color"
             app:font='@{"SF-UI-Display-Semibold.ttf"}'
             app:layout_constraintRight_toRightOf="@+id/card"
             app:layout_constraintLeft_toLeftOf="@+id/card"
@@ -127,7 +127,7 @@
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/details_lists_corners_bottom"
+            android:background="@drawable/gv_details_lists_corners_bottom"
             android:layout_marginBottom="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="16dp"
@@ -158,7 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/details_connect"
+                android:text="@string/gv_details_connect"
                 android:textColor="@android:color/white"
                 android:alpha="0.5"
                 app:font='@{"SF-UI-Display-Semibold.ttf"}' />
@@ -189,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/details_close"
+                android:text="@string/gv_details_close"
                 android:textColor="@android:color/white"
                 android:alpha="0.5"
                 app:font='@{"SF-UI-Display-Semibold.ttf"}' />
@@ -217,7 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/details_details"
+                android:text="@string/gv_details_details"
                 android:textColor="@android:color/white"
                 android:alpha="0.5"
                 app:font='@{"SF-UI-Display-Semibold.ttf"}' />

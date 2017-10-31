@@ -48,10 +48,10 @@ public class ProfileActivity extends AppCompatActivity {
         starter.putParcelableArrayListExtra(BUNDLE_LIST_DATA, listData);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            final Pair<View, String> p1 = Pair.create(avatar, activity.getString(R.string.transition_avatar_border));
-            final Pair<View, String> p2 = Pair.create(card, activity.getString(R.string.transition_card));
-            final Pair<View, String> p3 = Pair.create(image, activity.getString(R.string.transition_background));
-            final Pair<View, String> p4 = Pair.create(list, activity.getString(R.string.transition_list));
+            final Pair<View, String> p1 = Pair.create(avatar, activity.getString(R.string.gv_transition_avatar_border));
+            final Pair<View, String> p2 = Pair.create(card, activity.getString(R.string.gv_transition_card));
+            final Pair<View, String> p3 = Pair.create(image, activity.getString(R.string.gv_transition_background));
+            final Pair<View, String> p4 = Pair.create(list, activity.getString(R.string.gv_transition_list));
 
             final ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(activity, p1, p2, p3, p4);
             activity.startActivity(starter, options.toBundle());
@@ -63,7 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        DataBindingUtil.setContentView(this, R.layout.activity_profile);
+        DataBindingUtil.setContentView(this, R.layout.gv_activity_profile);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -71,7 +71,7 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final String fullName = getIntent().getStringExtra(BUNDLE_NAME);
-        final String title = fullName.split(" ")[0] + getString(R.string.profile);
+        final String title = fullName.split(" ")[0] + getString(R.string.gv_profile);
 
         ((TextView) findViewById(R.id.tv_title)).setText(title);
         ((TextView) findViewById(R.id.tv_name)).setText(fullName);
@@ -96,14 +96,14 @@ public class ProfileActivity extends AppCompatActivity {
             final View avatar = findViewById(R.id.avatar_border);
             final LinearLayout texts = (LinearLayout) findViewById(R.id.texts);
 
-            final int avatarHOffset = getResources().getDimensionPixelSize(R.dimen.profile_avatar_h_offset);
-            final int avatarVOffset = getResources().getDimensionPixelSize(R.dimen.profile_avatar_v_offset);
-            final int avatarSize = getResources().getDimensionPixelSize(R.dimen.profile_avatar_size);
-            final int textHOffset = getResources().getDimensionPixelSize(R.dimen.profile_texts_h_offset);
-            final int textVMinOffset = getResources().getDimensionPixelSize(R.dimen.profile_texts_v_min_offset);
-            final int textVMaxOffset = getResources().getDimensionPixelSize(R.dimen.profile_texts_v_max_offset);
+            final int avatarHOffset = getResources().getDimensionPixelSize(R.dimen.gv_profile_avatar_h_offset);
+            final int avatarVOffset = getResources().getDimensionPixelSize(R.dimen.gv_profile_avatar_v_offset);
+            final int avatarSize = getResources().getDimensionPixelSize(R.dimen.gv_profile_avatar_size);
+            final int textHOffset = getResources().getDimensionPixelSize(R.dimen.gv_profile_texts_h_offset);
+            final int textVMinOffset = getResources().getDimensionPixelSize(R.dimen.gv_profile_texts_v_min_offset);
+            final int textVMaxOffset = getResources().getDimensionPixelSize(R.dimen.gv_profile_texts_v_max_offset);
             final int textVDiff = textVMaxOffset - textVMinOffset;
-            final int header160 = getResources().getDimensionPixelSize(R.dimen.dp160);
+            final int header160 = getResources().getDimensionPixelSize(R.dimen.gv_dp160);
             final int toolBarHeight;
 
             {

@@ -51,22 +51,19 @@ For seven years Ramotion has been designing for those who desire to improve thei
     <string name="cs_text5">The Aegean Islands are within the sea and some bound it on its southern periphery…</string>
 
 
-    <string name="app_name">garlandview-example</string>
-    <string name="title_activity_details">DetailsActivity</string>
-    <string name="answer">ANSWER</string>
-    <string name="answer_low">answer</string>
-    <string name="connect">CONNECT</string>
-    <string name="years">years</string>
-    <string name="asked">asked</string>
-    <string name="profile">"'s Profile"</string>
-
-    <string name="transition_avatar_border" translatable="false">avatar_border</string>
-    <string name="transition_card" translatable="false">card</string>
-    <string name="transition_background" translatable="false">background</string>
-    <string name="transition_list" translatable="false">list</string>
-
-    <string name="details_connect">CONNECT</string>
-    <string name="details_close">CLOSE</string>
-    <string name="details_details">DETAILS</string>
-    <string name="initializing_faker">Initializing Faker...</string>
+    <string name="gv_title_activity_details">DetailsActivity</string>
+    <string name="gv_answer">ANSWER</string>
+    <string name="gv_answer_low">answer</string>
+    <string name="gv_connect">CONNECT</string>
+    <string name="gv_years">years</string>
+    <string name="gv_asked">asked</string>
+    <string name="gv_profile">"'s Profile"</string>
+    <string name="gv_transition_avatar_border" translatable="false">avatar_border</string>
+    <string name="gv_transition_card" translatable="false">card</string>
+    <string name="gv_transition_background" translatable="false">background</string>
+    <string name="gv_transition_list" translatable="false">list</string>
+    <string name="gv_details_connect">CONNECT</string>
+    <string name="gv_details_close">CLOSE</string>
+    <string name="gv_details_details">DETAILS</string>
+    <string name="gv_initializing_faker">Initializing Faker...</string>
 </resources>

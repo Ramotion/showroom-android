@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.ramotion.showroom.R;
-import com.ramotion.showroom.databinding.InnerItemBinding;
+import com.ramotion.showroom.databinding.GvInnerItemBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ public class InnerAdapter extends com.ramotion.garlandview.inner.InnerAdapter<In
 
     @Override
     public InnerItem onCreateViewHolder(ViewGroup parent, int viewType) {
-        final InnerItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), viewType, parent, false);
+        final GvInnerItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), viewType, parent, false);
         return new InnerItem(binding.getRoot());
     }
 
@@ -39,7 +39,7 @@ public class InnerAdapter extends com.ramotion.garlandview.inner.InnerAdapter<In
 
     @Override
     public int getItemViewType(int position) {
-        return R.layout.inner_item;
+        return R.layout.gv_inner_item;
     }
 
     public void addData(@NonNull List<InnerData> innerDataList) {

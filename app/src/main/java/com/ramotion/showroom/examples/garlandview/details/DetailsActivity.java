@@ -42,8 +42,8 @@ public class DetailsActivity extends AppCompatActivity implements GarlandApp.Fak
         starter.putExtra(BUNDLE_AVATAR_URL, url);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            final Pair<View, String> p1 = Pair.create(card, activity.getString(R.string.transition_card));
-            final Pair<View, String> p2 = Pair.create(avatar, activity.getString(R.string.transition_avatar_border));
+            final Pair<View, String> p1 = Pair.create(card, activity.getString(R.string.gv_transition_card));
+            final Pair<View, String> p2 = Pair.create(avatar, activity.getString(R.string.gv_transition_avatar_border));
 
             final ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(activity, p1, p2);
             activity.startActivity(starter, options.toBundle());
@@ -55,7 +55,7 @@ public class DetailsActivity extends AppCompatActivity implements GarlandApp.Fak
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.gv_activity_details);
 
         ((GarlandApp) getApplication()).addListener(this);
 

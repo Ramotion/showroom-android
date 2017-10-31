@@ -10,7 +10,7 @@
             android:id="@+id/header_middle"
             android:layout_width="0dp"
             android:layout_height="120dp"
-            android:background="@drawable/green_corners_top"
+            android:background="@drawable/gv_green_corners_top"
             android:layout_marginLeft="0dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
             android:gravity="start"
             android:ellipsize="end"
             android:maxLines="1"
-            android:textSize="@dimen/header_title1_text_size"
+            android:textSize="@dimen/gv_header_title1_text_size"
             app:font='@{"SF-UI-Display-Semibold.ttf"}'
             android:textColor="@android:color/white"
             android:layout_marginLeft="16dp"
@@ -58,9 +58,9 @@
 
         <FrameLayout
             android:id="@+id/avatar_border"
-            android:layout_width="@dimen/header_avatar_size"
-            android:layout_height="@dimen/header_avatar_size"
-            android:background="@drawable/avatar_border_header"
+            android:layout_width="@dimen/gv_header_avatar_size"
+            android:layout_height="@dimen/gv_header_avatar_size"
+            android:background="@drawable/gv_avatar_border_header"
             android:layout_gravity="center_vertical"
             app:layout_constraintTop_toTopOf="@+id/header_middle"
             android:layout_marginLeft="16dp"
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/item_avatar_border" />
+                android:layout_margin="@dimen/gv_item_avatar_border" />
 
         </FrameLayout>
 
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:font='@{"SF-UI-Display-Medium.ttf"}'
-                android:textSize="@dimen/header_name_text_size"
+                android:textSize="@dimen/gv_header_name_text_size"
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:alpha="0.8"
@@ -108,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:font='@{"SF-UI-Display-Regular.ttf"}'
-                android:textSize="@dimen/header_info_text_size"
+                android:textSize="@dimen/gv_header_info_text_size"
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:alpha="0.5"
@@ -120,9 +120,9 @@
             android:id="@+id/header_middle_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/answer"
+            android:text="@string/gv_answer"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/header_footer_text_size"
+            android:textSize="@dimen/gv_header_footer_text_size"
             app:font='@{"SF-UI-Display-Semibold.ttf"}'
             android:layout_marginLeft="16dp"
             android:alpha="0"
@@ -138,7 +138,7 @@
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/white_corners_bottom"
+            android:background="@drawable/gv_white_corners_bottom"
             app:layout_constraintLeft_toLeftOf="@+id/header_middle"
             app:layout_constraintRight_toRightOf="@+id/header_middle"
             app:layout_constraintTop_toBottomOf="@+id/header_middle">
@@ -149,21 +149,21 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="16dp"
                 app:font='@{"SF-UI-Display-Semibold.ttf"}'
-                android:text="@string/answer"
-                android:textColor="@color/header_green"
-                android:textSize="@dimen/header_footer_text_size" />
+                android:text="@string/gv_answer"
+                android:textColor="@color/gv_header_green"
+                android:textSize="@dimen/gv_header_footer_text_size" />
 
             <ImageView
-                android:layout_width="@dimen/item_icon_size"
-                android:layout_height="@dimen/item_icon_size"
+                android:layout_width="@dimen/gv_item_icon_size"
+                android:layout_height="@dimen/gv_item_icon_size"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="50dp"
                 android:src="@drawable/ic_like" />
 
             <ImageView
                 android:id="@+id/view2"
-                android:layout_width="@dimen/item_icon_size"
-                android:layout_height="@dimen/item_icon_size"
+                android:layout_width="@dimen/gv_item_icon_size"
+                android:layout_height="@dimen/gv_item_icon_size"
                 android:layout_gravity="center_vertical|end"
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_comment" />

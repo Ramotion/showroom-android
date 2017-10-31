@@ -49,7 +49,7 @@ public class OuterAdapter extends TailAdapter<OuterItem> {
 
     @Override
     public int getItemViewType(int position) {
-        return R.layout.outer_item;
+        return R.layout.gv_outer_item;
     }
 
 }

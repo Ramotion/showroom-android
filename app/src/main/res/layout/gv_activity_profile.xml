@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
-            android:theme="@style/AppTheme.AppBarOverlay">
+            android:theme="@style/GvAppTheme.AppBarOverlay">
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/toolbar_layout"
@@ -35,16 +35,16 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp160"
-                        android:layout_marginTop="@dimen/dp190"
+                        android:layout_height="@dimen/gv_dp160"
+                        android:layout_marginTop="@dimen/gv_dp190"
                         android:src="@drawable/details_top_background" />
 
                     <ImageView
                         android:id="@+id/header_image"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp190"
+                        android:layout_height="@dimen/gv_dp190"
                         android:src="@drawable/details_top_background"
-                        android:transitionName="@string/transition_background"
+                        android:transitionName="@string/gv_transition_background"
                         android:scaleType="centerCrop" />
 
                 </FrameLayout>
@@ -52,33 +52,33 @@
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp160"
+                    android:layout_height="@dimen/gv_dp160"
                     app:layout_collapseMode="pin"
-                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+                    app:popupTheme="@style/GvAppTheme.PopupOverlay" />
 
                 <FrameLayout
                     android:id="@+id/header_info"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp190"
+                    android:layout_height="@dimen/gv_dp190"
                     android:background="@android:color/white"
                     android:clipChildren="false"
-                    android:transitionName="@string/transition_card"
+                    android:transitionName="@string/gv_transition_card"
                     android:layout_gravity="bottom">
 
                     <FrameLayout
                         android:id="@+id/avatar_border"
-                        android:transitionName="@string/transition_avatar_border"
+                        android:transitionName="@string/gv_transition_avatar_border"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_horizontal|top"
                         android:layout_marginTop="-50dp"
-                        android:background="@drawable/avatar_border_details">
+                        android:background="@drawable/gv_avatar_border_details">
 
                         <ImageView
                             android:id="@+id/avatar"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="@dimen/details_avatar_border"
+                            android:layout_margin="@dimen/gv_details_avatar_border"
                             android:scaleType="centerCrop"
                             android:layout_gravity="center" />
 
@@ -89,9 +89,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginTop="@dimen/profile_texts_v_max_offset"
-                        android:layout_marginStart="@dimen/profile_texts_h_offset"
-                        android:layout_marginEnd="@dimen/profile_texts_h_offset">
+                        android:layout_marginTop="@dimen/gv_profile_texts_v_max_offset"
+                        android:layout_marginStart="@dimen/gv_profile_texts_h_offset"
+                        android:layout_marginEnd="@dimen/gv_profile_texts_h_offset">
 
                         <TextView
                             android:id="@+id/tv_name"
@@ -100,7 +100,7 @@
                             android:layout_gravity="center_horizontal"
                             android:gravity="center"
                             android:textSize="24sp"
-                            android:textColor="@color/details_name_color"
+                            android:textColor="@color/gv_details_name_color"
                             android:ellipsize="end"
                             android:maxLines="1"
                             app:font='@{"SF-UI-Display-Regular.ttf"}' />
@@ -110,7 +110,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="17sp"
-                            android:textColor="@color/details_info_color"
+                            android:textColor="@color/gv_details_info_color"
                             android:ellipsize="end"
                             android:maxLines="1"
                             android:layout_marginTop="8dp"
@@ -126,7 +126,7 @@
                             android:textSize="18.4sp"
                             android:ellipsize="end"
                             android:maxLines="1"
-                            android:textColor="@color/details_status_color"
+                            android:textColor="@color/gv_details_status_color"
                             android:layout_gravity="center_horizontal"
                             android:gravity="center"
                             app:font='@{"SF-UI-Display-Semibold.ttf"}' />
@@ -157,8 +157,8 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/details_list_color"
-            android:transitionName="@string/transition_list"
+            android:background="@color/gv_details_list_color"
+            android:transitionName="@string/gv_transition_list"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 

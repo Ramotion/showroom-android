@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.ramotion.showroom.R;
-import com.ramotion.showroom.databinding.DetailsItemBinding;
+import com.ramotion.showroom.databinding.GvDetailsItemBinding;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ class DetailsAdapter extends RecyclerView.Adapter<DetailsItem> {
     @Override
     public DetailsItem onCreateViewHolder(ViewGroup parent, int viewType) {
         final LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        final DetailsItemBinding binding = DataBindingUtil.inflate(inflater, R.layout.details_item, parent, false);
+        final GvDetailsItemBinding binding = DataBindingUtil.inflate(inflater, R.layout.gv_details_item, parent, false);
         return new DetailsItem(binding.getRoot());
     }
 

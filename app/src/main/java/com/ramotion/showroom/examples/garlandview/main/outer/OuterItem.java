@@ -78,10 +78,10 @@ public class OuterItem extends HeaderItem {
         super(itemView);
 
         // Init header
-        m10dp = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.dp10);
-        m120dp = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.dp120);
-        mTitleSize1 = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.header_title2_text_size);
-        mTitleSize2 = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.header_title2_name_text_size);
+        m10dp = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.gv_dp10);
+        m120dp = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.gv_dp120);
+        mTitleSize1 = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.gv_header_title2_text_size);
+        mTitleSize2 = itemView.getContext().getResources().getDimensionPixelSize(R.dimen.gv_header_title2_name_text_size);
 
         mHeader = itemView.findViewById(R.id.header);
         mHeaderAlpha = itemView.findViewById(R.id.header_alpha);
@@ -117,8 +117,8 @@ public class OuterItem extends HeaderItem {
         });
 
         mRecyclerView.addItemDecoration(new HeaderDecorator(
-                itemView.getContext().getResources().getDimensionPixelSize(R.dimen.inner_item_height),
-                itemView.getContext().getResources().getDimensionPixelSize(R.dimen.inner_item_offset)));
+                itemView.getContext().getResources().getDimensionPixelSize(R.dimen.gv_inner_item_height),
+                itemView.getContext().getResources().getDimensionPixelSize(R.dimen.gv_inner_item_offset)));
 
         // Init fonts
         DataBindingUtil.bind(((FrameLayout) mHeader).getChildAt(0));
@@ -169,8 +169,8 @@ public class OuterItem extends HeaderItem {
         mHeaderCaption1.setText(title1);
         mHeaderCaption2.setText(title2);
 
-        mName.setText(String.format("%s %s", header.name, context.getString(R.string.asked)));
-        mInfo.setText(String.format("%s %s · %s", header.age, context.getString(R.string.years), header.address));
+        mName.setText(String.format("%s %s", header.name, context.getString(R.string.gv_asked)));
+        mInfo.setText(String.format("%s %s · %s", header.age, context.getString(R.string.gv_years), header.address));
     }
 
     void clearContent() {
