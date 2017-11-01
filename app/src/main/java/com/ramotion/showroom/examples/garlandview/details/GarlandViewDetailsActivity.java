@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.ramotion.showroom.R;
-import com.ramotion.showroom.examples.garlandview.GarlandApp;
+import com.ramotion.showroom.examples.garlandview.RxFaker;
 import com.ramotion.showroom.examples.garlandview.main.GarlandViewMainActivity;
 import com.ramotion.showroom.examples.garlandview.profile.GarlandViewProfileActivity;
 
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import io.bloco.faker.Faker;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
-public class GarlandViewDetailsActivity extends AppCompatActivity implements GarlandApp.FakerReadyListener {
+public class GarlandViewDetailsActivity extends AppCompatActivity implements RxFaker.FakerReadyListener {
 
     private static final int ITEM_COUNT = 4;
 
@@ -57,7 +57,7 @@ public class GarlandViewDetailsActivity extends AppCompatActivity implements Gar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gv_activity_details);
 
-        ((GarlandApp) getApplication()).addListener(this);
+        RxFaker.addListener(this);
 
         ((TextView) findViewById(R.id.tv_name)).setText(getIntent().getStringExtra(BUNDLE_NAME));
         ((TextView) findViewById(R.id.tv_info)).setText(getIntent().getStringExtra(BUNDLE_INFO));

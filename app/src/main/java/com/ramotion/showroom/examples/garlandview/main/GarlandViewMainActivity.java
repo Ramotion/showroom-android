@@ -9,7 +9,7 @@ import com.ramotion.garlandview.TailRecyclerView;
 import com.ramotion.garlandview.TailSnapHelper;
 import com.ramotion.garlandview.header.HeaderTransformer;
 import com.ramotion.showroom.R;
-import com.ramotion.showroom.examples.garlandview.GarlandApp;
+import com.ramotion.showroom.examples.garlandview.RxFaker;
 import com.ramotion.showroom.examples.garlandview.details.GarlandViewDetailsActivity;
 import com.ramotion.showroom.examples.garlandview.main.inner.InnerData;
 import com.ramotion.showroom.examples.garlandview.main.inner.InnerItem;
@@ -25,7 +25,7 @@ import java.util.List;
 import io.bloco.faker.Faker;
 
 
-public class GarlandViewMainActivity extends AppCompatActivity implements GarlandApp.FakerReadyListener {
+public class GarlandViewMainActivity extends AppCompatActivity implements RxFaker.FakerReadyListener {
 
     private final static int OUTER_COUNT = 10;
     private final static int INNER_COUNT = 20;
@@ -35,7 +35,7 @@ public class GarlandViewMainActivity extends AppCompatActivity implements Garlan
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gv_activity_main);
 
-        ((GarlandApp) getApplication()).addListener(this);
+        RxFaker.addListener(this);
     }
 
     @Override
