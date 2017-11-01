@@ -164,7 +164,7 @@ public class SlideCardEntity {
                 .withActivityClass(CardSliderActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
         dataset.add(builder.withImageRes(R.drawable.sr_garland_view).withLink("https://github.com/Ramotion/garland-view-android")
-                .withTitle("Garland View").withDescription("Garland View is .....")
+                .withTitle("Garland View").withDescription("GarlandView seamlessly displays a grid of 2D data, navigable via swiping horizontally and scrolling vertically.")
                 .withActivityClass(GarlandViewMainActivity.class).withTechNote("Java").withTimeNote("200 hours").build());
 
         return dataset;

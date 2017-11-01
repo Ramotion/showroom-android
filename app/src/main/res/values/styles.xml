@@ -205,6 +205,8 @@
         <item name="colorPrimary">@color/gv_color_primary</item>
         <item name="colorPrimaryDark">@color/gv_color_primary_dark</item>
         <item name="colorAccent">@color/gv_color_accent</item>
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
+
     </style>
 
     <style name="GvAppTheme.NoActionBar">
