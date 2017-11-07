@@ -52,6 +52,7 @@ dependencies {
     compile 'com.ramotion.paperonboarding:paper-onboarding:1.1.1'
     compile 'com.ramotion.cardslider:card-slider:0.1.0'
     compile 'com.ramotion.garlandview:garland-view:0.2.1'
+    compile 'com.ramotion.circlemenu:circle-menu:0.1.0'
 
     // For GarlandView example
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'

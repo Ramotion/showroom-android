@@ -37,13 +37,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/gv_dp160"
                         android:layout_marginTop="@dimen/gv_dp190"
-                        android:src="@drawable/details_top_background" />
+                        android:src="@drawable/gv_details_top_background" />
 
                     <ImageView
                         android:id="@+id/header_image"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/gv_dp190"
-                        android:src="@drawable/details_top_background"
+                        android:src="@drawable/gv_details_top_background"
                         android:transitionName="@string/gv_transition_background"
                         android:scaleType="centerCrop" />
 

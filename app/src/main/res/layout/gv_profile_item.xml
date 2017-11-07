@@ -84,7 +84,7 @@
                 android:id="@+id/view2"
                 android:layout_width="@dimen/gv_item_icon_size"
                 android:layout_height="@dimen/gv_item_icon_size"
-                android:src="@drawable/ic_comment"
+                android:src="@drawable/gv_ic_comment"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 android:layout_marginTop="0dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -95,7 +95,7 @@
             <ImageView
                 android:layout_width="@dimen/gv_item_icon_size"
                 android:layout_height="@dimen/gv_item_icon_size"
-                android:src="@drawable/ic_like"
+                android:src="@drawable/gv_ic_like"
                 android:id="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/tv_connect"
                 android:layout_marginTop="0dp"

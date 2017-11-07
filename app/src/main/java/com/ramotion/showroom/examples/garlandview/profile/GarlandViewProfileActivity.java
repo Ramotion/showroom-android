@@ -84,7 +84,7 @@ public class GarlandViewProfileActivity extends AppCompatActivity {
 
         Glide.with(this)
                 .load(getIntent().getStringExtra(BUNDLE_AVATAR_URL))
-                .placeholder(R.drawable.avatar_placeholder)
+                .placeholder(R.drawable.gv_avatar_placeholder)
                 .bitmapTransform(new CropCircleTransformation(this))
                 .into((ImageView) findViewById(R.id.avatar));
 

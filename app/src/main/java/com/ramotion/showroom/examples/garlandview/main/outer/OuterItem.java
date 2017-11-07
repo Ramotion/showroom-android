@@ -155,7 +155,7 @@ public class OuterItem extends HeaderItem {
 
         Glide.with(context)
                 .load(header.avatarUrl)
-                .placeholder(R.drawable.avatar_placeholder)
+                .placeholder(R.drawable.gv_avatar_placeholder)
                 .bitmapTransform(new CropCircleTransformation(context))
                 .into(mAvatar);
 

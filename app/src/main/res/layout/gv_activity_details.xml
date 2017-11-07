@@ -9,7 +9,7 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@drawable/details_top_background"
+            android:src="@drawable/gv_details_top_background"
             android:scaleType="centerCrop"
             android:transitionName="@string/gv_transition_background"
             app:layout_constraintRight_toRightOf="parent"
@@ -150,7 +150,7 @@
             <ImageView
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:src="@drawable/button_connect"
+                android:src="@drawable/gv_button_connect"
                 android:scaleType="fitXY"
                 android:layout_gravity="center_horizontal" />
 
@@ -181,7 +181,7 @@
             <ImageView
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:src="@drawable/button_close"
+                android:src="@drawable/gv_button_close"
                 android:scaleType="fitXY"
                 android:layout_gravity="center_horizontal" />
 
@@ -209,7 +209,7 @@
             <ImageView
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:src="@drawable/button_details"
+                android:src="@drawable/gv_button_details"
                 android:scaleType="fitXY"
                 android:layout_gravity="center_horizontal" />
 
