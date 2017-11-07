@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cm_icons">
+        <item>@drawable/cm_ic_home_white_24dp</item>
+        <item>@drawable/cm_ic_search_white_24dp</item>
+        <item>@drawable/cm_ic_notifications_white_24dp</item>
+        <item>@drawable/cm_ic_settings_white_24dp</item>
+        <item>@drawable/cm_ic_place_white_24dp</item>
+    </array>
+    <array name="cm_colors">
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/holo_green_dark</item>
+        <item>@android:color/holo_red_light</item>
+        <item>@android:color/holo_purple</item>
+        <item>@android:color/holo_orange_light</item>
+    </array>
+</resources>

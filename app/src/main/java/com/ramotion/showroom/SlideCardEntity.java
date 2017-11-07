@@ -1,6 +1,7 @@
 package com.ramotion.showroom;
 
 import com.ramotion.showroom.examples.cardslider.CardSliderActivity;
+import com.ramotion.showroom.examples.circlemenu.CircleMenuMainActivity;
 import com.ramotion.showroom.examples.expandingcollection.ExpandingCollectionActivity;
 import com.ramotion.showroom.examples.foldingcell.FoldingCellActivity;
 import com.ramotion.showroom.examples.garlandview.main.GarlandViewMainActivity;
@@ -165,7 +166,11 @@ public class SlideCardEntity {
 
         dataset.add(builder.withImageRes(R.drawable.sr_garland_view).withLink("https://github.com/Ramotion/garland-view-android")
                 .withTitle("Garland View").withDescription("GarlandView seamlessly displays a grid of 2D data, navigable via swiping horizontally and scrolling vertically.")
-                .withActivityClass(GarlandViewMainActivity.class).withTechNote("Java").withTimeNote("200 hours").build());
+                .withActivityClass(GarlandViewMainActivity.class).withTechNote("Java").withTimeNote("160 hours").build());
+
+        dataset.add(builder.withImageRes(R.drawable.sr_circle_menu).withLink("https://github.com/Ramotion/circle-menu-android")
+                .withTitle("Circle Menu").withDescription("A menu module with a circular layout. Works for applications with visually rich interactions.")
+                .withActivityClass(CircleMenuMainActivity.class).withTechNote("Java").withTimeNote("80 hours").build());
 
         return dataset;
     }

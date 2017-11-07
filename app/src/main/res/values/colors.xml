@@ -81,4 +81,9 @@
     <color name="gv_details_item_text">#858d92</color>
     <color name="gv_details_item_separator">@color/gv_item_separator_color</color>
 
+    <!-- CIRCLE MENU -->
+    <color name="cm_color_primary">#3F51B5</color>
+    <color name="cm_color_primary_dark">#303F9F</color>
+    <color name="cm_color_accent">#FF4081</color>
+    
 </resources>

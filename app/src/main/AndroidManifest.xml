@@ -10,8 +10,8 @@
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/sr_launcher"
-        android:roundIcon="@mipmap/sr_launcher_round"
         android:label="@string/sr_app_name"
+        android:roundIcon="@mipmap/sr_launcher_round"
         android:supportsRtl="true"
         tools:replace="android:label">
 
@@ -23,6 +23,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -61,6 +62,11 @@
         <activity
             android:name=".examples.garlandview.profile.GarlandViewProfileActivity"
             android:theme="@style/GvAppTheme.NoActionBar" />
+
+        <activity
+            android:name=".examples.circlemenu.CircleMenuMainActivity"
+            android:theme="@style/CmAppTheme" />
+
 
     </application>
 

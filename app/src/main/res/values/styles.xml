@@ -218,6 +218,14 @@
     <style name="GvAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="GvAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
+    
+    <!-- CIRCLE MENU -->
+    <style name="CmAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cm_color_primary</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/cm_color_accent</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
+    </style>
 
 </resources>
