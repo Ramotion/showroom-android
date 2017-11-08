@@ -9,10 +9,10 @@
 For seven years Ramotion has been designing for those who desire to improve their lives and the lives of others by inventing and implementing digital products.\n\nWe are very proud that our customers entrusted us with such an important task as the improvement of their products’ user interfaces.\n\nToday, we are pleased to introduce an evolved Ramotion, featuring designs in a code, and we hope to bring even more value to our customers’ projects on which our team works.\n\nTo help you evaluate the quality of development, we have created a mobile application which demos working examples. We hope this will help you learn more about what we offer.\n\n© 2017, Ramotion Inc.
     </string>
 
-    <string name="sr_contact_us_btn_link">
+    <string name="sr_contact_us_btn_link" translatable="false">
         https://www.ramotion.com/?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=contactact_us_butoon</string>
-    <string name="sr_bottom_bar_facebook_link">https://www.facebook.com/Ramotion</string>
-    <string name="sr_bottom_bar_dribble_link">
+    <string name="sr_bottom_bar_facebook_link" translatable="false">https://www.facebook.com/Ramotion</string>
+    <string name="sr_bottom_bar_dribble_link" translatable="false">
         https://dribbble.com/ramotion?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=showroomandroid</string>
     <string name="sr_bottom_bar_instagram_link">https://instagram.com/ramotion</string>
     <string name="sr_bottom_bar_twitter_link">https://twitter.com/ramotion</string>
