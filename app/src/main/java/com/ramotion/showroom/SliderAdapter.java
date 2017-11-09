@@ -50,6 +50,7 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
 
         TextView description = (TextView) cardLayout.findViewById(R.id.sr_slider_card_description_text);
         description.setText(dataEntity.getDescription());
+        description.setTag("description" + position);
 
         TextView time = (TextView) cardLayout.findViewById(R.id.sr_slider_card_time_note_text);
         time.setText(dataEntity.getTimeNote());
@@ -84,13 +85,20 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
         });
 
         container.addView(cardLayout, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+        cardLayout.setTag(position);
+//        Log.i("SHOWROOM-SA", "Inflated #"+position);
         return cardLayout;
+    }
+
+    @Override
+    public void startUpdate(ViewGroup container) {
+        super.startUpdate(container);
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
+//        Log.i("SHOWROOM-SA", "Destroyed #"+position);
     }
-
 
 }

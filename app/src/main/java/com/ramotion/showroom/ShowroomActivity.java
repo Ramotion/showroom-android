@@ -3,6 +3,7 @@ package com.ramotion.showroom;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
@@ -39,7 +40,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * Fast straightforward implementation
+ * Simple straightforward implementation
  */
 public class ShowroomActivity extends AppCompatActivity {
     public final String TAG = "SHOWROOM";
@@ -77,6 +78,7 @@ public class ShowroomActivity extends AppCompatActivity {
     private boolean helpLayoutShown = false;
     private boolean helpLayoutTitleBackgroundShown = false;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,11 +128,14 @@ public class ShowroomActivity extends AppCompatActivity {
         titleBtnHelpCenterX = (int) (screenWidthPx - globalPaddingPx - helpButtonSizePx / 2);
         titleBtnHelpCenterY = (int) (globalPaddingPx + helpButtonSizePx / 2);
 
-        // Change current slider page index in label
+        // Change current slider page index in label and fix description text view size
         sliderContainer.getSlider().addOnPageChangeListener(new OnPageChangeListenerAdapter() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onPageSelected(int position) {
                 sliderCounterLabel.setText((position + 1) + "/" + sliderAdapter.getCount());
+//                CustomTextView descriptionText = sliderContainer.findViewWithTag("description"+position);
+//                descriptionText.setRestrictions();
             }
         });
 
@@ -152,7 +157,6 @@ public class ShowroomActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 
         playInitialAnimations();
-
     }
 
     // Help button should show help layout with animation
@@ -179,7 +183,6 @@ public class ShowroomActivity extends AppCompatActivity {
 
     // Animations to show help(info) screen
     private void showHelpOverlay() {
-
         if (animationsInProgress) return;
         animationsInProgress = true;
         titleLayout.bringToFront();
@@ -257,7 +260,6 @@ public class ShowroomActivity extends AppCompatActivity {
             }
         });
         hideAnimation.start();
-
     }
 
     // Straightforward code to tune all initial animations in one place
@@ -364,7 +366,6 @@ public class ShowroomActivity extends AppCompatActivity {
 
     // Bind all bottom bar link buttons on help screen
     private void bindHelpScreenBottomBarButtons() {
-
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {

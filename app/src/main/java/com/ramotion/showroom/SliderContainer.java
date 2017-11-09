@@ -44,7 +44,6 @@ public class SliderContainer extends FrameLayout implements ViewPager.OnPageChan
         slider.setPageTransformer(false, new SliderTransformer());
     }
 
-
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
@@ -66,11 +65,18 @@ public class SliderContainer extends FrameLayout implements ViewPager.OnPageChan
             case MotionEvent.ACTION_DOWN:
                 initialTouch.x = (int) ev.getX();
                 initialTouch.y = (int) ev.getY();
+            case MotionEvent.ACTION_UP:
+                this.performClick();
             default:
                 ev.offsetLocation(center.x - initialTouch.x, center.y - initialTouch.y);
                 break;
         }
         return slider.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean performClick() {
+        return super.performClick();
     }
 
     @Override
@@ -91,7 +97,5 @@ public class SliderContainer extends FrameLayout implements ViewPager.OnPageChan
     public Slider getSlider() {
         return slider;
     }
-
-
 
 }

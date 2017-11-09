@@ -47,23 +47,16 @@
         </LinearLayout>
 
         <!-- Description-->
-        <FrameLayout
+        <com.ramotion.showroom.EllipsizingTextView
+            android:id="@+id/sr_slider_card_description_text"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="@dimen/sr_slider_card_padding"
             android:layout_marginEnd="@dimen/sr_slider_card_padding"
             android:layout_marginStart="@dimen/sr_slider_card_padding"
             android:layout_weight="1"
-            android:background="@android:color/transparent">
-
-            <com.ramotion.showroom.CustomTextView
-                android:id="@+id/sr_slider_card_description_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:textAppearance="@style/SrSliderCardDescriptionText" />
-
-        </FrameLayout>
+            android:background="@android:color/transparent"
+            android:textAppearance="@style/SrSliderCardDescriptionText" />
 
         <!--Time note-->
         <TextView

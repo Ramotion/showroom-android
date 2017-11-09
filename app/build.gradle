@@ -13,12 +13,12 @@ android {
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 3
-        versionName "1.1.1rc"
+        versionName "1.1.2rc"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -27,12 +27,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
     productFlavors {
-    }
 
+    }
     dataBinding {
         enabled = true
     }
-
 }
 
 dependencies {
@@ -40,15 +39,14 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    // Google Analytics
     compile 'com.google.android.gms:play-services-analytics:11.6.0'
-
     // Support library
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:cardview-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
     // Controls
     compile 'com.ramotion.expandingcollection:expanding-collection:0.9.0'
     compile 'com.ramotion.foldingcell:folding-cell:1.2.1'
@@ -56,7 +54,6 @@ dependencies {
     compile 'com.ramotion.cardslider:card-slider:0.1.0'
     compile 'com.ramotion.garlandview:garland-view:0.2.1'
     compile 'com.ramotion.circlemenu:circle-menu:0.1.0'
-
     // For GarlandView example
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.2'
@@ -64,8 +61,6 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'jp.wasabeef:glide-transformations:2.0.2'
     compile 'org.greenrobot:eventbus:3.0.0'
-
-
-
+    // Testing
     testCompile 'junit:junit:4.12'
 }
