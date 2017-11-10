@@ -134,8 +134,6 @@ public class ShowroomActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 sliderCounterLabel.setText((position + 1) + "/" + sliderAdapter.getCount());
-//                CustomTextView descriptionText = sliderContainer.findViewWithTag("description"+position);
-//                descriptionText.setRestrictions();
             }
         });
 
