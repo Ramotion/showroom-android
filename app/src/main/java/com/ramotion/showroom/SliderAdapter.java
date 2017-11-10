@@ -86,7 +86,6 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
 
         container.addView(cardLayout, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
         cardLayout.setTag(position);
-//        Log.i("SHOWROOM-SA", "Inflated #"+position);
         return cardLayout;
     }
 
@@ -98,7 +97,6 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
-//        Log.i("SHOWROOM-SA", "Destroyed #"+position);
     }
 
 }

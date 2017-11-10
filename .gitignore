@@ -14,6 +14,7 @@
 # Build directory #
 target/
 build/
+app/release/
 
 # Generated files #
 bin/
@@ -34,3 +35,5 @@ obj/
 # files for the dex VM #
 *.dex
 /app/google-services.json
+app/libs/
+
