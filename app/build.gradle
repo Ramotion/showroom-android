@@ -7,7 +7,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '26.0.3'
     defaultConfig {
         applicationId "com.ramotion.showroom"
         minSdkVersion 19
@@ -63,4 +63,8 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     // Testing
     testCompile 'junit:junit:4.12'
+
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    
 }
