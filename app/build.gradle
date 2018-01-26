@@ -2,7 +2,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
 
 android {
@@ -40,7 +40,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     // Google Analytics
-    compile 'com.google.android.gms:play-services-analytics:11.6.0'
+    compile 'com.google.android.gms:play-services-analytics:11.8.0'
     // Support library
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'

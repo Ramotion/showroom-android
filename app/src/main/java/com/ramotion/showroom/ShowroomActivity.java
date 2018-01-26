@@ -40,7 +40,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * Simple straightforward implementation
+ * Straightforward implementation
  */
 public class ShowroomActivity extends AppCompatActivity {
     public final String TAG = "SHOWROOM";
@@ -94,21 +94,21 @@ public class ShowroomActivity extends AppCompatActivity {
 
         // Get UI parts
         // main layout
-        mainLayout = (LinearLayout) findViewById(R.id.sr_main_content_layout);
-        sliderContainer = (SliderContainer) findViewById(R.id.sr_slide_pager_container);
-        sliderCounterLabel = (TextView) findViewById(R.id.sr_slider_position_counter);
-        contactButton = (AppCompatButton) findViewById(R.id.sr_btn_contact);
+        mainLayout = findViewById(R.id.sr_main_content_layout);
+        sliderContainer = findViewById(R.id.sr_slide_pager_container);
+        sliderCounterLabel = findViewById(R.id.sr_slider_position_counter);
+        contactButton = findViewById(R.id.sr_btn_contact);
         // title bar layout
-        titleLayout = (FrameLayout) findViewById(R.id.sr_title_layout);
+        titleLayout = findViewById(R.id.sr_title_layout);
         titleHelpButton = findViewById(R.id.sr_title_help_btn);
-        titleIcon = (ImageView) findViewById(R.id.sr_title_icon);
+        titleIcon = findViewById(R.id.sr_title_icon);
         // help layout (hidden when app starts)
-        helpLayout = (RelativeLayout) findViewById(R.id.sr_help_layout);
-        helpLayoutBottomPanel = (FrameLayout) findViewById(R.id.sr_help_layout_bottom_panel);
-        helpLayoutScrollView = (ScrollView) findViewById(R.id.sr_help_layout_scroll_view);
-        helpLayoutTitleBackground = (ImageView) findViewById(R.id.sr_help_layout_title_background);
-        helpLayoutTextHeader = (TextView) findViewById(R.id.sr_help_layout_text_header);
-        helpLayoutTextContent = (TextView) findViewById(R.id.sr_help_layout_text_content);
+        helpLayout = findViewById(R.id.sr_help_layout);
+        helpLayoutBottomPanel = findViewById(R.id.sr_help_layout_bottom_panel);
+        helpLayoutScrollView = findViewById(R.id.sr_help_layout_scroll_view);
+        helpLayoutTitleBackground = findViewById(R.id.sr_help_layout_title_background);
+        helpLayoutTextHeader = findViewById(R.id.sr_help_layout_text_header);
+        helpLayoutTextContent = findViewById(R.id.sr_help_layout_text_content);
 
         // Add content to slider through adapter
         sliderAdapter = new SliderAdapter(this, SlideCardEntity.prepareDataset());
@@ -128,9 +128,8 @@ public class ShowroomActivity extends AppCompatActivity {
         titleBtnHelpCenterX = (int) (screenWidthPx - globalPaddingPx - helpButtonSizePx / 2);
         titleBtnHelpCenterY = (int) (globalPaddingPx + helpButtonSizePx / 2);
 
-        // Change current slider page index in label and fix description text view size
+        // Change current slider page index in label
         sliderContainer.getSlider().addOnPageChangeListener(new OnPageChangeListenerAdapter() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onPageSelected(int position) {
                 sliderCounterLabel.setText((position + 1) + "/" + sliderAdapter.getCount());
@@ -155,6 +154,7 @@ public class ShowroomActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 
         playInitialAnimations();
+
     }
 
     // Help button should show help layout with animation
@@ -181,6 +181,7 @@ public class ShowroomActivity extends AppCompatActivity {
 
     // Animations to show help(info) screen
     private void showHelpOverlay() {
+
         if (animationsInProgress) return;
         animationsInProgress = true;
         titleLayout.bringToFront();
@@ -258,6 +259,7 @@ public class ShowroomActivity extends AppCompatActivity {
             }
         });
         hideAnimation.start();
+
     }
 
     // Straightforward code to tune all initial animations in one place
@@ -296,7 +298,7 @@ public class ShowroomActivity extends AppCompatActivity {
         });
 
         // Title text slide from right and move up with title icon
-        final ImageView title = (ImageView) findViewById(R.id.sr_title_text);
+        final ImageView title = findViewById(R.id.sr_title_text);
         TranslateAnimation titleSlideFromRight = new TranslateAnimation(screenWidthPx - globalPaddingPx, 0, titleYCenterPx, titleYCenterPx);
         titleSlideFromRight.setInterpolator(new AccelerateDecelerateInterpolator());
         titleSlideFromRight.setStartOffset(1830);
@@ -313,7 +315,7 @@ public class ShowroomActivity extends AppCompatActivity {
         });
 
         // Background show
-        final ImageView mainBackground = (ImageView) findViewById(R.id.sr_background_image);
+        final ImageView mainBackground = findViewById(R.id.sr_background_image);
         AlphaAnimation mainBackgroundShow = new AlphaAnimation(0f, 1f);
         mainBackgroundShow.setInterpolator(new DecelerateInterpolator());
         mainBackgroundShow.setDuration(600);
@@ -364,6 +366,7 @@ public class ShowroomActivity extends AppCompatActivity {
 
     // Bind all bottom bar link buttons on help screen
     private void bindHelpScreenBottomBarButtons() {
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -379,7 +382,7 @@ public class ShowroomActivity extends AppCompatActivity {
             }
         };
 
-        ViewGroup buttonsContainer = (ViewGroup) findViewById(R.id.sr_help_layout_bottom_buttons_container);
+        ViewGroup buttonsContainer = findViewById(R.id.sr_help_layout_bottom_buttons_container);
         int childCount = buttonsContainer.getChildCount();
         for (int childNo = 0; childNo < childCount; childNo++) {
             View child = buttonsContainer.getChildAt(childNo);

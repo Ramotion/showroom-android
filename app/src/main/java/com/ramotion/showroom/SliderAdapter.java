@@ -20,7 +20,7 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
     private ArrayList<SlideCardEntity> dataset = new ArrayList<>();
     private LayoutInflater inflater;
 
-    public SliderAdapter(Context context, ArrayList<SlideCardEntity> dataset) {
+    SliderAdapter(Context context, ArrayList<SlideCardEntity> dataset) {
         this.context = context;
         this.dataset = dataset;
         inflater = LayoutInflater.from(context);
@@ -42,23 +42,23 @@ public class SliderAdapter extends android.support.v4.view.PagerAdapter {
 
         CardView cardLayout = (CardView) inflater.inflate(R.layout.sr_slider_card_layout, container, false);
 
-        ImageView headImageView = (ImageView) cardLayout.findViewById(R.id.sr_slider_card_image);
+        ImageView headImageView = cardLayout.findViewById(R.id.sr_slider_card_image);
         headImageView.setImageResource(dataEntity.getImageRes());
 
-        TextView titleText = (TextView) cardLayout.findViewById(R.id.sr_slider_card_title_text);
+        TextView titleText = cardLayout.findViewById(R.id.sr_slider_card_title_text);
         titleText.setText(dataEntity.getTitle());
 
-        TextView description = (TextView) cardLayout.findViewById(R.id.sr_slider_card_description_text);
+        TextView description = cardLayout.findViewById(R.id.sr_slider_card_description_text);
         description.setText(dataEntity.getDescription());
         description.setTag("description" + position);
 
-        TextView time = (TextView) cardLayout.findViewById(R.id.sr_slider_card_time_note_text);
+        TextView time = cardLayout.findViewById(R.id.sr_slider_card_time_note_text);
         time.setText(dataEntity.getTimeNote());
 
-        TextView tech = (TextView) cardLayout.findViewById(R.id.sr_slider_card_tech_note_text);
+        TextView tech = cardLayout.findViewById(R.id.sr_slider_card_tech_note_text);
         tech.setText(dataEntity.getTechNote());
 
-        ImageButton shareBtn = (ImageButton) cardLayout.findViewById(R.id.sr_slider_card_share_btn);
+        ImageButton shareBtn = cardLayout.findViewById(R.id.sr_slider_card_share_btn);
 
         shareBtn.setOnClickListener(new View.OnClickListener() {
             @Override

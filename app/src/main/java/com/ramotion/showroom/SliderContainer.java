@@ -21,8 +21,7 @@ public class SliderContainer extends FrameLayout implements ViewPager.OnPageChan
     private Point initialTouch = new Point();
 
     public SliderContainer(@NonNull Context context) {
-        super(context);
-        init(context);
+        this(context, null);
     }
 
     public SliderContainer(@NonNull Context context, @Nullable AttributeSet attrs) {
@@ -59,7 +58,7 @@ public class SliderContainer extends FrameLayout implements ViewPager.OnPageChan
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        // We capture any touches not already handled by the ViewPager
+        // Capture any touches not already handled by the ViewPager
         // to implement scrolling from a touch outside the pager bounds.
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:

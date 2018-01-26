@@ -12,6 +12,7 @@ import java.util.ArrayList;
 /***
  * Representation of dataset for one card in main slider
  */
+@SuppressWarnings("WeakerAccess")
 public class SlideCardEntity {
 
     private int imageRes;
@@ -21,9 +22,6 @@ public class SlideCardEntity {
     private String techNote;
     private String timeNote;
     private Class activityClass;
-
-    public SlideCardEntity() {
-    }
 
     private SlideCardEntity(Builder builder) {
         setImageRes(builder.imageRes);
@@ -91,6 +89,7 @@ public class SlideCardEntity {
         this.activityClass = activityClass;
     }
 
+    @SuppressWarnings("SameParameterValue")
     public static final class Builder {
         private int imageRes;
         private String title;
