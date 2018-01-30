@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:largeHeap="true"
         android:name="com.ramotion.showroom.ShowroomApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"

@@ -2,7 +2,7 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
 
 android {
@@ -63,7 +63,7 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     // Testing
     testCompile 'junit:junit:4.12'
-
+    // Leak Canary
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
     

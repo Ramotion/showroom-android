@@ -20,7 +20,7 @@ public class Slider extends ViewPager {
     }
 
     private void init() {
-        this.setOffscreenPageLimit(3);
+        this.setOffscreenPageLimit(2);
         this.setClipChildren(false);
         this.setClipToPadding(false);
     }
