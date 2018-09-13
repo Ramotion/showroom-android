@@ -2,16 +2,18 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-apply plugin: 'com.google.gms.google-services'
+// apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.3'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.ramotion.showroom"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 3
         versionName "1.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,12 +24,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
     }
-    productFlavors {
-
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     dataBinding {
         enabled = true
@@ -35,36 +37,44 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     // Google Analytics
-    compile 'com.google.android.gms:play-services-analytics:11.8.0'
+    // compile 'com.google.android.gms:play-services-analytics:11.8.0'
     // Support library
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support:support-v4:26.1.0'
-    compile 'com.android.support:cardview-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     // Controls
-    compile 'com.ramotion.expandingcollection:expanding-collection:0.9.0'
-    compile 'com.ramotion.foldingcell:folding-cell:1.2.1'
-    compile 'com.ramotion.paperonboarding:paper-onboarding:1.1.1'
-    compile 'com.ramotion.cardslider:card-slider:0.1.0'
-    compile 'com.ramotion.garlandview:garland-view:0.2.1'
-    compile 'com.ramotion.circlemenu:circle-menu:0.1.0'
+    implementation 'com.ramotion.expandingcollection:expanding-collection:0.9.0'
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.1'
+    implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.1'
+    implementation 'com.ramotion.cardslider:card-slider:0.1.0'
+    implementation 'com.ramotion.garlandview:garland-view:0.2.1'
+    implementation 'com.ramotion.circlemenu:circle-menu:0.1.0'
+    implementation 'com.ramotion.fluidslider:fluid-slider:0.3.0'
+    //    implementation 'com.ramotion.navigationtoolbar:navigation-toolbar:0.1.0'
+    implementation project(':navigationtoolbar')
+    implementation 'com.ramotion.directselect:direct-select:0.1.0'
     // For GarlandView example
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
-    compile 'com.github.blocoio:faker:1.2.5'
-    compile 'com.github.bumptech.glide:glide:3.8.0'
-    compile 'jp.wasabeef:glide-transformations:2.0.2'
-    compile 'org.greenrobot:eventbus:3.0.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
+    implementation 'com.github.blocoio:faker:1.2.5'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
     // Testing
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
     // Leak Canary
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-    
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

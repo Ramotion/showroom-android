@@ -43,4 +43,11 @@
     <dimen name="gv_profile_texts_v_max_offset">66dp</dimen>
     <dimen name="gv_profile_texts_v_min_offset">8dp</dimen>
 
+    <dimen name="nt_fab_margin">16dp</dimen>
+    <dimen name="nt_decor_bottom">5dp</dimen>
+    <dimen name="nt_title_left_offset">-20dp</dimen>
+    <dimen name="nt_line_right_offset">20dp</dimen>
+    <dimen name="nt_line_bottom_offset">20dp</dimen>
+    <dimen name="nt_line_title_offset">10dp</dimen>
+
 </resources>

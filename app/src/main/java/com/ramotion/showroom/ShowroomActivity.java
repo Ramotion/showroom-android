@@ -39,26 +39,29 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Straightforward implementation
  */
 public class ShowroomActivity extends AppCompatActivity {
     public final String TAG = "SHOWROOM";
 
-    private SliderContainer sliderContainer;
-    private AppCompatButton contactButton;
-    private TextView sliderCounterLabel;
-    private View titleHelpButton;
-    private FrameLayout titleLayout;
-    private RelativeLayout helpLayout;
-    private LinearLayout mainLayout;
-    private ImageView titleIcon;
+    @BindView(R.id.sr_slide_pager_container) SliderContainer sliderContainer;
+    @BindView(R.id.sr_btn_contact) AppCompatButton contactButton;
+    @BindView(R.id.sr_slider_position_counter) TextView sliderCounterLabel;
+    @BindView(R.id.sr_title_help_btn) View titleHelpButton;
+    @BindView(R.id.sr_title_layout) FrameLayout titleLayout;
+    @BindView(R.id.sr_main_content_layout) LinearLayout mainLayout;
+    @BindView(R.id.sr_title_icon) ImageView titleIcon;
 
-    private FrameLayout helpLayoutBottomPanel;
-    private ScrollView helpLayoutScrollView;
-    private ImageView helpLayoutTitleBackground;
-    private TextView helpLayoutTextHeader;
-    private TextView helpLayoutTextContent;
+    @BindView(R.id.sr_help_layout) RelativeLayout helpLayout;
+    @BindView(R.id.sr_help_layout_bottom_panel) FrameLayout helpLayoutBottomPanel;
+    @BindView(R.id.sr_help_layout_scroll_view) ScrollView helpLayoutScrollView;
+    @BindView(R.id.sr_help_layout_title_background) ImageView helpLayoutTitleBackground;
+    @BindView(R.id.sr_help_layout_text_header) TextView helpLayoutTextHeader;
+    @BindView(R.id.sr_help_layout_text_content) TextView helpLayoutTextContent;
 
     private SliderAdapter sliderAdapter;
 
@@ -91,24 +94,7 @@ public class ShowroomActivity extends AppCompatActivity {
             supportActionBar.hide();
 
         setContentView(R.layout.sr_main_activity);
-
-        // Get UI parts
-        // main layout
-        mainLayout = findViewById(R.id.sr_main_content_layout);
-        sliderContainer = findViewById(R.id.sr_slide_pager_container);
-        sliderCounterLabel = findViewById(R.id.sr_slider_position_counter);
-        contactButton = findViewById(R.id.sr_btn_contact);
-        // title bar layout
-        titleLayout = findViewById(R.id.sr_title_layout);
-        titleHelpButton = findViewById(R.id.sr_title_help_btn);
-        titleIcon = findViewById(R.id.sr_title_icon);
-        // help layout (hidden when app starts)
-        helpLayout = findViewById(R.id.sr_help_layout);
-        helpLayoutBottomPanel = findViewById(R.id.sr_help_layout_bottom_panel);
-        helpLayoutScrollView = findViewById(R.id.sr_help_layout_scroll_view);
-        helpLayoutTitleBackground = findViewById(R.id.sr_help_layout_title_background);
-        helpLayoutTextHeader = findViewById(R.id.sr_help_layout_text_header);
-        helpLayoutTextContent = findViewById(R.id.sr_help_layout_text_content);
+        ButterKnife.bind(this);
 
         // Add content to slider through adapter
         sliderAdapter = new SliderAdapter(this, SlideCardEntity.prepareDataset());
