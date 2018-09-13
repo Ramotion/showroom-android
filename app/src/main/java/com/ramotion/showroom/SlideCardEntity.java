@@ -2,9 +2,12 @@ package com.ramotion.showroom;
 
 import com.ramotion.showroom.examples.cardslider.CardSliderActivity;
 import com.ramotion.showroom.examples.circlemenu.CircleMenuMainActivity;
+import com.ramotion.showroom.examples.directselect.DirectSelectActivity;
 import com.ramotion.showroom.examples.expandingcollection.ExpandingCollectionActivity;
+import com.ramotion.showroom.examples.fluidslider.FluidSliderActivity;
 import com.ramotion.showroom.examples.foldingcell.FoldingCellActivity;
 import com.ramotion.showroom.examples.garlandview.main.GarlandViewMainActivity;
+import com.ramotion.showroom.examples.navigationtoolbar.NavigationToolbarActivity;
 import com.ramotion.showroom.examples.paperonboarding.PaperOnboardingActivity;
 
 import java.util.ArrayList;
@@ -145,31 +148,43 @@ public class SlideCardEntity {
     public static ArrayList<SlideCardEntity> prepareDataset() {
         ArrayList<SlideCardEntity> dataset = new ArrayList<>();
 
-        Builder builder = new Builder();
-
-        dataset.add(builder.withImageRes(R.drawable.sr_folding_cell_img).withLink("https://github.com/Ramotion/folding-cell-android")
+        dataset.add(new Builder().withImageRes(R.drawable.sr_folding_cell_img).withLink("https://github.com/Ramotion/folding-cell-android")
                 .withTitle("Folding Cell").withDescription("An expanding content cell inspired by folding paper material. It helps to navigate between cards in user interfaces.")
                 .withActivityClass(FoldingCellActivity.class).withTechNote("Java").withTimeNote("160 hours").build());
 
-        dataset.add(builder.withImageRes(R.drawable.sr_expanding_collection_img).withLink("https://github.com/Ramotion/expanding-collection-android")
+        dataset.add(new Builder().withImageRes(R.drawable.sr_expanding_collection_img).withLink("https://github.com/Ramotion/expanding-collection-android")
                 .withTitle("Expanding Collection").withDescription("The controller expands cards from a preview to a middle state, and full screen. Can be used for navigation in card-based UIs.")
                 .withActivityClass(ExpandingCollectionActivity.class).withTechNote("Java").withTimeNote("160 hours").build());
 
-        dataset.add(builder.withImageRes(R.drawable.sr_paper_onboarding).withLink("https://github.com/Ramotion/paper-onboarding-android")
+        dataset.add(new Builder().withImageRes(R.drawable.sr_paper_onboarding).withLink("https://github.com/Ramotion/paper-onboarding-android")
                 .withTitle("Paper Onboarding").withDescription("A Material Design pagination controller. It is used for onboarding flows or tutorials.")
                 .withActivityClass(PaperOnboardingActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
-        dataset.add(builder.withImageRes(R.drawable.sr_card_slider).withLink("https://github.com/Ramotion/cardslider-android")
+        dataset.add(new Builder().withImageRes(R.drawable.sr_card_slider).withLink("https://github.com/Ramotion/cardslider-android")
                 .withTitle("Card Slider").withDescription("Card Slider is the controller that allows user to swipe through cards with pictures and accompanying descriptions.")
                 .withActivityClass(CardSliderActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
-        dataset.add(builder.withImageRes(R.drawable.sr_garland_view).withLink("https://github.com/Ramotion/garland-view-android")
+        dataset.add(new Builder().withImageRes(R.drawable.sr_garland_view).withLink("https://github.com/Ramotion/garland-view-android")
                 .withTitle("Garland View").withDescription("GarlandView seamlessly displays a grid of 2D data, navigable via swiping horizontally and scrolling vertically.")
                 .withActivityClass(GarlandViewMainActivity.class).withTechNote("Java").withTimeNote("160 hours").build());
 
-        dataset.add(builder.withImageRes(R.drawable.sr_circle_menu).withLink("https://github.com/Ramotion/circle-menu-android")
+        dataset.add(new Builder().withImageRes(R.drawable.sr_circle_menu).withLink("https://github.com/Ramotion/circle-menu-android")
                 .withTitle("Circle Menu").withDescription("A menu module with a circular layout. Works for applications with visually rich interactions.")
                 .withActivityClass(CircleMenuMainActivity.class).withTechNote("Java").withTimeNote("80 hours").build());
+
+        // TODO replace placeholders with real images
+        dataset.add(new Builder().withImageRes(R.drawable.sr_img_placeholder).withLink("https://github.com/Ramotion/fluid-slider-android")
+                .withTitle("Fluid Slider").withDescription("A slider widget with a popup bubble displaying the precise value selected.")
+                .withActivityClass(FluidSliderActivity.class).withTechNote("Kotlin").withTimeNote("120 hours").build());
+
+        dataset.add(new Builder().withImageRes(R.drawable.sr_img_placeholder).withLink("https://github.com/Ramotion/navigation-toolbar-android")
+                .withTitle("Navigation Toolbar").withDescription("Navigation toolbar is a slide-modeled UI navigation controller.")
+                .withActivityClass(NavigationToolbarActivity.class).withTechNote("Kotlin").withTimeNote("120 hours").build());
+
+        dataset.add(new Builder().withImageRes(R.drawable.sr_img_placeholder).withLink("https://github.com/Ramotion/direct-select-android")
+                .withTitle("Direct Select").withDescription("DirectSelect Dropdown is a selection widget with an ethereal, " +
+                        "full-screen modal popup displaying the available choices when the widget is interact with.")
+                .withActivityClass(DirectSelectActivity.class).withTechNote("Java").withTimeNote("120 hours").build());
 
         return dataset;
     }

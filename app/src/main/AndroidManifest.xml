@@ -69,6 +69,17 @@
             android:name=".examples.circlemenu.CircleMenuMainActivity"
             android:theme="@style/CmAppTheme" />
 
+        <activity
+            android:name=".examples.fluidslider.FluidSliderActivity"
+            android:theme="@style/FsAppTheme" />
+
+        <activity
+            android:name=".examples.navigationtoolbar.NavigationToolbarActivity"
+            android:theme="@style/NtAppTheme" />
+
+        <activity
+            android:name=".examples.directselect.DirectSelectActivity"
+            android:theme="@style/DsAppTheme" />
 
     </application>
 

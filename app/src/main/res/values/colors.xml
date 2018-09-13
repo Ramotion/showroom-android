@@ -85,5 +85,22 @@
     <color name="cm_color_primary">#3F51B5</color>
     <color name="cm_color_primary_dark">#303F9F</color>
     <color name="cm_color_accent">#FF4081</color>
+
+    <!-- NAVIGATION TOOLBAR -->
+    <color name="nt_color_primary">#3F51B5</color>
+    <color name="nt_color_primary_dark">#303F9F</color>
+    <color name="nt_color_accent">#FF4081</color>
+
+    <!-- DIRECT SELECT -->
+    <color name="ds_color_primary">#ffffff</color>
+    <color name="ds_color_window_bg">#eeeeee</color>
+    <color name="ds_color_primary_dark">#797979</color>
+    <color name="ds_color_accent">#6d74ff</color>
+
+    <color name="ds_selector_border">#dedede</color>
+    <color name="ds_picker_box_border">#9f9f9f</color>
+    <color name="ds_picker_box_bg">#ffffff</color>
+    <color name="ds_list_bg">#ffffff</color>
+    <color name="ds_picker_list_text">#232323</color>
     
 </resources>

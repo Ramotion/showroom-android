@@ -66,4 +66,43 @@ For seven years Ramotion has been designing for those who desire to improve thei
     <string name="gv_details_close">CLOSE</string>
     <string name="gv_details_details">DETAILS</string>
     <string name="gv_initializing_faker">Initializing Faker...</string>
+
+    <string name="fs_long_text">Kotlin is a great fit for developing Android applications, bringing all of the advantages of a modern language to the Android platform without introducing any new restrictions.</string>
+
+    <string name="nt_action_settings">Settings</string>
+    <string name="nt_cd_second_item_image">second item image</string>
+    <string name="nt_cd_avatar">avatar</string>
+    <string name="nt_cd_header_background">header background</string>
+    <string name="nt_cd_header_item_background">header item background</string>
+    <string-array name="nt_left_spinner">
+        <item>Popular</item>
+        <item>New</item>
+    </string-array>
+    <string-array name="nt_right_spinner">
+        <item>This week</item>
+        <item>This month</item>
+    </string-array>
+
+    <string name="ds_picker_box_arrows_icon">picker box arrows icon</string>
+    <string name="ds_cell_image">cell image</string>
+    <string name="ds_title">Direct Select for Android</string>
+    <string name="ds_subtitle">New iOS and Android control for you and your company. Please make sure to use it properly, if you have any questions, please create an issue on our GitHub account.</string>
+    <string name="ds_customized_picker">Here a fully customized picker with custom background and cell layout:</string>
+    <string name="ds_picker_with_custom_bg">Here a picker with default cell but custom background:</string>
+    <string name="ds_footer_text">by Ramotion inc.</string>
+    <string-array name="ds_sport_array">
+        <item>Soccer</item>
+        <item>American Football</item>
+        <item>Basketball</item>
+        <item>Cricket</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
+        <item>Hockey</item>
+        <item>Volleyball</item>
+        <item>Baseball</item>
+        <item>Rugby</item>
+        <item>Golf</item>
+    </string-array>
+
+
 </resources>
