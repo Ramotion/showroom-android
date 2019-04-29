@@ -1,9 +1,10 @@
 package com.ramotion.showroom.examples.garlandview.profile;
 
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ramotion.showroom.R;
 import com.ramotion.showroom.examples.garlandview.details.DetailsData;

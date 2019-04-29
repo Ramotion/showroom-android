@@ -1,12 +1,13 @@
 package com.ramotion.showroom.examples.circlemenu;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ramotion.circlemenu.CircleMenuView;
 import com.ramotion.showroom.R;

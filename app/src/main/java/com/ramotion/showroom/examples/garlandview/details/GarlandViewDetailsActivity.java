@@ -4,14 +4,16 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.ramotion.showroom.R;
 import com.ramotion.showroom.examples.garlandview.RxFaker;
 import com.ramotion.showroom.examples.garlandview.main.GarlandViewMainActivity;
@@ -62,10 +64,13 @@ public class GarlandViewDetailsActivity extends AppCompatActivity implements RxF
         ((TextView) findViewById(R.id.tv_name)).setText(getIntent().getStringExtra(BUNDLE_NAME));
         ((TextView) findViewById(R.id.tv_info)).setText(getIntent().getStringExtra(BUNDLE_INFO));
 
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.gv_avatar_placeholder);
+        requestOptions.bitmapTransform(new CropCircleTransformation(this));
+
         Glide.with(this)
+                .setDefaultRequestOptions(requestOptions)
                 .load(getIntent().getStringExtra(BUNDLE_AVATAR_URL))
-                .placeholder(R.drawable.gv_avatar_placeholder)
-                .bitmapTransform(new CropCircleTransformation(this))
                 .into((ImageView) findViewById(R.id.avatar));
     }
 

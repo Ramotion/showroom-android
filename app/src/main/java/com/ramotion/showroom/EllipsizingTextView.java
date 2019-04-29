@@ -12,12 +12,14 @@ import android.text.StaticLayout;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 
+import androidx.appcompat.widget.AppCompatTextView;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class EllipsizingTextView extends android.support.v7.widget.AppCompatTextView {
+public class EllipsizingTextView extends AppCompatTextView {
     private static final String ELLIPSIS = "\u2026";
     private static final Pattern DEFAULT_END_PUNCTUATION = Pattern.compile("[\\.,\u2026;\\:\\s]*$", Pattern.DOTALL);
 

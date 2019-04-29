@@ -1,9 +1,10 @@
 package com.ramotion.showroom.examples.garlandview.main.inner;
 
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 
 import com.ramotion.showroom.R;
 import com.ramotion.showroom.databinding.GvInnerItemBinding;

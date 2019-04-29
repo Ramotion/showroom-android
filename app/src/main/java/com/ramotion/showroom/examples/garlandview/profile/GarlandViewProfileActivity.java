@@ -4,14 +4,8 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.databinding.DataBindingUtil;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.transition.Transition;
 import android.util.Pair;
 import android.view.View;
@@ -20,7 +14,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.ViewCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.google.android.material.appbar.AppBarLayout;
 import com.ramotion.showroom.R;
 import com.ramotion.showroom.examples.garlandview.details.DetailsData;
 
@@ -82,10 +84,13 @@ public class GarlandViewProfileActivity extends AppCompatActivity {
         final ArrayList<DetailsData> listData = getIntent().getParcelableArrayListExtra(BUNDLE_LIST_DATA);
         recyclerView.setAdapter(new ProfileAdapter(listData));
 
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.gv_avatar_placeholder);
+        requestOptions.bitmapTransform(new CropCircleTransformation(this));
+
         Glide.with(this)
+                .setDefaultRequestOptions(requestOptions)
                 .load(getIntent().getStringExtra(BUNDLE_AVATAR_URL))
-                .placeholder(R.drawable.gv_avatar_placeholder)
-                .bitmapTransform(new CropCircleTransformation(this))
                 .into((ImageView) findViewById(R.id.avatar));
 
         final AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);

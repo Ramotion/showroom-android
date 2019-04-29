@@ -11,7 +11,8 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
+
+import androidx.annotation.DrawableRes;
 
 import com.ramotion.showroom.R;
 

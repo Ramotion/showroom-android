@@ -1,6 +1,7 @@
 package com.ramotion.showroom;
 
-import android.support.v4.view.ViewPager;
+
+import androidx.viewpager.widget.ViewPager;
 
 public abstract class OnPageChangeListenerAdapter implements ViewPager.OnPageChangeListener {
 

@@ -1,11 +1,7 @@
 package com.ramotion.showroom.examples.garlandview.main.outer;
 
 import android.content.Context;
-import android.databinding.DataBindingUtil;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.RecyclerView;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.AbsoluteSizeSpan;
@@ -16,7 +12,13 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.core.view.ViewCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.ramotion.garlandview.header.HeaderDecorator;
 import com.ramotion.garlandview.header.HeaderItem;
 import com.ramotion.garlandview.inner.InnerLayoutManager;
@@ -153,10 +155,13 @@ public class OuterItem extends HeaderItem {
         mRecyclerView.setLayoutManager(new InnerLayoutManager());
         ((InnerAdapter) mRecyclerView.getAdapter()).addData(tail);
 
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.gv_avatar_placeholder);
+        requestOptions.bitmapTransform(new CropCircleTransformation(context));
+
         Glide.with(context)
+                .setDefaultRequestOptions(requestOptions)
                 .load(header.avatarUrl)
-                .placeholder(R.drawable.gv_avatar_placeholder)
-                .bitmapTransform(new CropCircleTransformation(context))
                 .into(mAvatar);
 
         final String title1 = header.title + "?";
@@ -174,7 +179,7 @@ public class OuterItem extends HeaderItem {
     }
 
     void clearContent() {
-        Glide.clear(mAvatar);
+        Glide.with(itemView.getContext()).clear(mAvatar);
         ((InnerAdapter) mRecyclerView.getAdapter()).clearData();
     }
 

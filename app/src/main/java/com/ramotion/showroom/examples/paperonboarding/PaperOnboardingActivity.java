@@ -2,10 +2,11 @@ package com.ramotion.showroom.examples.paperonboarding;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ramotion.paperonboarding.PaperOnboardingEngine;
 import com.ramotion.paperonboarding.PaperOnboardingPage;

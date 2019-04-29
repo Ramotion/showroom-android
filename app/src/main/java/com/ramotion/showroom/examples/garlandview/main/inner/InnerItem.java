@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.ramotion.showroom.R;
 
 import org.greenrobot.eventbus.EventBus;
@@ -55,7 +56,7 @@ public class InnerItem extends com.ramotion.garlandview.inner.InnerItem {
     }
 
     public void clearContent() {
-        Glide.clear(mAvatar);
+        Glide.with(itemView.getContext()).clear(mAvatar);
         mInnerData = null;
     }
 
@@ -67,10 +68,13 @@ public class InnerItem extends com.ramotion.garlandview.inner.InnerItem {
         mAddress.setText(String.format("%s %s · %s",
                 data.age, mAddress.getContext().getString(R.string.gv_years), data.address));
 
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions.placeholder(R.drawable.gv_avatar_placeholder);
+        requestOptions.bitmapTransform(new CropCircleTransformation(itemView.getContext()));
+
         Glide.with(itemView.getContext())
+                .setDefaultRequestOptions(requestOptions)
                 .load(data.avatarUrl)
-                .placeholder(R.drawable.gv_avatar_placeholder)
-                .bitmapTransform(new CropCircleTransformation(itemView.getContext()))
                 .into(mAvatar);
     }
 

@@ -1,16 +1,16 @@
 package com.ramotion.showroom.examples.cardslider;
 
 import android.animation.ObjectAnimator;
-import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.transition.Transition;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.ramotion.showroom.R;
 import com.ramotion.showroom.examples.cardslider.utils.DecodeBitmapTask;

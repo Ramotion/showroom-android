@@ -3,7 +3,6 @@ package com.ramotion.showroom.examples.expandingcollection.view;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -14,6 +13,8 @@ import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.ramotion.showroom.R;
 

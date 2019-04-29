@@ -7,12 +7,6 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.StyleRes;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
@@ -24,6 +18,13 @@ import android.widget.ImageView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StyleRes;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ramotion.cardslider.CardSliderLayoutManager;
 import com.ramotion.cardslider.CardSnapHelper;

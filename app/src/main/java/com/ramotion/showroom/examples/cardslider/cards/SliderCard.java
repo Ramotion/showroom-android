@@ -2,12 +2,13 @@ package com.ramotion.showroom.examples.cardslider.cards;
 
 import android.graphics.Bitmap;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.RequiresApi;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.RequiresApi;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ramotion.showroom.R;
 import com.ramotion.showroom.examples.cardslider.utils.DecodeBitmapTask;

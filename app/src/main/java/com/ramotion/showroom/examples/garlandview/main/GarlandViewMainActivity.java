@@ -1,8 +1,9 @@
 package com.ramotion.showroom.examples.garlandview.main;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ramotion.garlandview.TailLayoutManager;
 import com.ramotion.garlandview.TailRecyclerView;
