@@ -229,6 +229,7 @@
     </style>
 
     <style name="DSAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@android:color/white</item>
         <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
     </style>
 

@@ -173,7 +173,6 @@ public class ShowroomActivity extends AppCompatActivity {
                 .throttleFirst(1000, TimeUnit.MILLISECONDS)
                 .subscribe(click -> {
                             if (savedDribbbleToken == null || savedDribbbleToken.isEmpty()) {
-                                shareShotButton.setEnabled(false);
                                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_share_shot_btn_link))));
                             } else {
                                 openDribblesShotsActivity();
@@ -210,6 +209,7 @@ public class ShowroomActivity extends AppCompatActivity {
         if (data != null) {
             String code = data.getQueryParameter("code");
             if (code != null && (savedDribbbleToken == null || savedDribbbleToken.isEmpty())) {
+                shareShotButton.setEnabled(false);
                 authToDribbble(code);
             }
         }

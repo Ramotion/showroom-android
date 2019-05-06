@@ -7,6 +7,7 @@
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity">
 
     <ImageView
@@ -43,8 +44,10 @@
       android:maxLines="2"
       android:ellipsize="end"
       tools:text="Raven Score Raven Score Raven Score"
+      app:layout_constraintVertical_bias="0"
       app:layout_constraintWidth_percent="0.8"
       app:layout_constraintTop_toBottomOf="@id/ivShotImage"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -59,6 +62,7 @@
       android:padding="12dp"
       android:textColor="@android:color/black"
       android:scrollbars="vertical"
+      android:textCursorDrawable="@null"
       tools:text="SasdasdasdaAsdasdasdasdsadasdasdasdasdasdasdasdasdasdasd"
       app:layout_constraintWidth_percent="0.8"
       app:layout_constraintTop_toBottomOf="@id/tvShotTitle"
@@ -83,10 +87,10 @@
       android:id="@+id/pbSaveLoading"
       android:layout_width="0dp"
       android:layout_height="0dp"
-      android:indeterminateTint="@android:color/white"
       android:layout_marginBottom="4dp"
       android:layout_marginTop="4dp"
       android:visibility="gone"
+      android:theme="@style/DSAppTheme"
       tools:visibility="visible"
       app:layout_constraintTop_toTopOf="@id/btnSend"
       app:layout_constraintBottom_toBottomOf="@id/btnSend"
