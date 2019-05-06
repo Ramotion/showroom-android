@@ -15,6 +15,7 @@ import com.ramotion.showroom.examples.dribbbleshots.domain.interactors.ObserveDr
 import com.ramotion.showroom.examples.dribbbleshots.domain.interactors.SaveDribbbleShotUseCase
 import com.ramotion.showroom.examples.dribbbleshots.domain.repository.DribbbleShotsRepository
 import com.ramotion.showroom.examples.dribbbleshots.domain.repository.DribbbleUserRepository
+import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleDetailsViewModel
 import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribblbeshots.DribbbleShotsViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.koin.viewModel
@@ -39,4 +40,5 @@ val dribbbleShotsModule = module {
   factory { SaveDribbbleShotUseCase(get()) }
 
   viewModel { DribbbleShotsViewModel(get(), get()) }
+  viewModel { DribbbleDetailsViewModel(get(), get()) }
 }

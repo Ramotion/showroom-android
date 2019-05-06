@@ -16,8 +16,7 @@
     android:roundIcon="@mipmap/sr_launcher_round"
     android:supportsRtl="true"
     tools:replace="android:label">
-    <activity android:name=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity">
-    </activity>
+
     <activity
       android:name=".ShowroomActivity"
       android:label="@string/sr_app_name"
@@ -37,40 +36,56 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
     <activity
       android:name=".examples.dribbbleshots.presentation.ui.dribblbeshots.DribbbleShotsActivity"
       android:exported="true"
-      android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+      android:screenOrientation="portrait"
+      android:theme="@style/DSAppTheme"/>
+
+    <activity
+      android:name=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/DSAppTheme"/>
+
     <activity
       android:name=".examples.expandingcollection.ExpandingCollectionActivity"
       android:screenOrientation="portrait"
       android:theme="@style/EcAppTheme"/>
+
     <activity
       android:name=".examples.foldingcell.FoldingCellActivity"
       android:screenOrientation="portrait"
       android:theme="@style/FcAppTheme"/>
+
     <activity
       android:name=".examples.paperonboarding.PaperOnboardingActivity"
       android:screenOrientation="portrait"
       android:theme="@style/PoAppTheme"/>
+
     <activity
       android:name=".examples.cardslider.CardSliderActivity"
       android:screenOrientation="portrait"
       android:theme="@style/CsAppTheme"/>
+
     <activity
       android:name=".examples.garlandview.main.GarlandViewMainActivity"
       android:screenOrientation="portrait"
       android:theme="@style/GvAppTheme.NoActionBar"/>
+
     <activity
       android:name=".examples.garlandview.details.GarlandViewDetailsActivity"
       android:label="@string/gv_title_activity_details"
       android:theme="@style/GvAppTheme.NoActionBar"/>
+
     <activity
       android:name=".examples.garlandview.profile.GarlandViewProfileActivity"
       android:theme="@style/GvAppTheme.NoActionBar"/>
+
     <activity
       android:name=".examples.circlemenu.CircleMenuMainActivity"
       android:theme="@style/CmAppTheme"/>
+
   </application>
 
 </manifest>

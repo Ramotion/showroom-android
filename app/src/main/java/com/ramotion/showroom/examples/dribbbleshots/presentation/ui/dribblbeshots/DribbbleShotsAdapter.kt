@@ -2,6 +2,7 @@ package com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribblbesho
 
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
@@ -119,7 +120,8 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   fun bind(shot: DribbbleShot, imageLoader: ImageLoader) {
     binding.ivShot.alpha = if (shot.saved) 0.4f else 1f
     binding.ivGif.alpha = if (shot.saved) 0.4f else 1f
-    imageLoader.loadImage(binding.ivShot, shot.imageTeaser, true, 20)
+    binding.ivGif.visibility = View.VISIBLE
+    imageLoader.loadImage(binding.ivShot, shot.imageTeaser, true, 20, true)
 
     if (!shot.saved) {
       RxView.clicks(binding.dribbbleShotContainer)
@@ -153,7 +155,7 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   }
 
   fun updateTeaser(shot: DribbbleShot, imageLoader: ImageLoader) {
-    imageLoader.loadImage(binding.ivShot, shot.imageTeaser, true, 20)
+    imageLoader.loadImage(binding.ivShot, shot.imageTeaser, true, 20, true)
   }
 }
 

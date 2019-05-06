@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity">
+
+    <ImageView
+      android:id="@+id/ivShotImage"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="#f2f2f2"
+      app:layout_constraintDimensionRatio="4:3"
+      app:layout_constraintVertical_bias="0"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+      android:id="@+id/ivClose"
+      android:layout_width="28dp"
+      android:layout_height="28dp"
+      android:layout_marginTop="24dp"
+      android:layout_marginEnd="32dp"
+      android:src="@drawable/ic_close"
+      android:padding="7dp"
+      android:background="@drawable/shape_circle_black"
+      app:layout_constraintTop_toTopOf="@id/ivShotImage"
+      app:layout_constraintEnd_toEndOf="@id/ivShotImage"/>
+
+    <TextView
+      android:id="@+id/tvShotTitle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textColor="@android:color/black"
+      android:textSize="24dp"
+      android:layout_marginTop="24dp"
+      android:maxLines="2"
+      android:ellipsize="end"
+      tools:text="Raven Score Raven Score Raven Score"
+      app:layout_constraintWidth_percent="0.8"
+      app:layout_constraintTop_toBottomOf="@id/ivShotImage"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+      android:id="@+id/etShotMessage"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginBottom="16dp"
+      android:background="@drawable/shape_round_corners"
+      android:gravity="top"
+      android:padding="12dp"
+      android:textColor="@android:color/black"
+      android:scrollbars="vertical"
+      tools:text="SasdasdasdaAsdasdasdasdsadasdasdasdasdasdasdasdasdasdasd"
+      app:layout_constraintWidth_percent="0.8"
+      app:layout_constraintTop_toBottomOf="@id/tvShotTitle"
+      app:layout_constraintBottom_toTopOf="@id/btnSend"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnSend"
+      style="@style/SrButtonStyle"
+      android:layout_width="0dp"
+      android:layout_height="60dp"
+      android:layout_marginBottom="24dp"
+      android:background="@drawable/sr_button_contact"
+      android:text="@string/send"
+      app:layout_constraintWidth_percent="0.8"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+      android:id="@+id/pbSaveLoading"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:indeterminateTint="@android:color/white"
+      android:layout_marginBottom="4dp"
+      android:layout_marginTop="4dp"
+      android:visibility="gone"
+      tools:visibility="visible"
+      app:layout_constraintTop_toTopOf="@id/btnSend"
+      app:layout_constraintBottom_toBottomOf="@id/btnSend"
+      app:layout_constraintStart_toStartOf="@id/btnSend"
+      app:layout_constraintEnd_toEndOf="@id/btnSend"/>
+
+    <ProgressBar
+      android:id="@+id/pbInitLoading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      tools:visibility="visible"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -43,6 +43,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.jakewharton.rxbinding2.view.RxView;
 import com.ramotion.showroom.examples.dribbbleshots.data.remote.api.DribbbleApi;
 import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribblbeshots.DribbbleShotsActivity;
 import com.ramotion.showroom.examples.dribbbleshots.utils.DIAdapterForJava;
@@ -50,6 +51,8 @@ import com.ramotion.showroom.examples.dribbbleshots.utils.DIAdapterForJava;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+
+import java.util.concurrent.TimeUnit;
 
 /**
  * Straightforward implementation
@@ -98,7 +101,7 @@ public class ShowroomActivity extends AppCompatActivity {
     private DribbbleApi dribbbleAuthApi = DIAdapterForJava.INSTANCE.getDribbbleAuthApi(this);
     private Disposable dribbbleAuthSubscription;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "CheckResult"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -166,13 +169,17 @@ public class ShowroomActivity extends AppCompatActivity {
         contactButton.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_contact_us_btn_link)))));
 
-        shareShotButton.setOnClickListener(v -> {
-            if (savedDribbbleToken == null || savedDribbbleToken.isEmpty()) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_share_shot_btn_link))));
-            } else {
-                openDribblesShotsActivity();
-            }
-        });
+        RxView.clicks(shareShotButton)
+                .throttleFirst(1000, TimeUnit.MILLISECONDS)
+                .subscribe(click -> {
+                            if (savedDribbbleToken == null || savedDribbbleToken.isEmpty()) {
+                                shareShotButton.setEnabled(false);
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_share_shot_btn_link))));
+                            } else {
+                                openDribblesShotsActivity();
+                            }
+                        }
+                );
 
         bindHelpButton();
         bindHelpScreenBottomBarButtons();
@@ -224,6 +231,7 @@ public class ShowroomActivity extends AppCompatActivity {
                             savedDribbbleToken = result.getToken();
                             getSharedPreferences("Showroom", Context.MODE_PRIVATE).edit().putString("dribbbleToken", result.getToken()).apply();
                             openDribblesShotsActivity();
+                            shareShotButton.setEnabled(true);
                         },
                         e -> Snackbar.make(rootContainer, e.getMessage(), Snackbar.LENGTH_SHORT).show());
     }

@@ -91,4 +91,5 @@
   <string name="dribbble_shots">Dribbble shots</string>
   <string name="error_occurred">Error occurred</string>
   <string name="please_post_shot">Please post an animated shot on Dribbble first</string>
+  <string name="send">Send</string>
 </resources>

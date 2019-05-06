@@ -41,7 +41,9 @@ class DribbbleShotsRepositoryImpl(
   override fun saveDribbbleShot(dribbbleShot: DribbbleShot): Completable =
     dribbbleShotsFirebase.saveDribbbleShot(dribbbleShot)
         .doOnComplete {
-          dribbbleShotsPublisher.onNext(dribbbleShotsPublisher.value!!.map { if (it.id == dribbbleShot.id) dribbbleShot else it })
+          dribbbleShotsPublisher.onNext(
+              dribbbleShotsPublisher.value!!.map { if (it.id == dribbbleShot.id) dribbbleShot.copy(saved = true) else it }
+          )
         }
 
   private fun checkSavedShots(firebaseShots: List<DribbbleShot>, remoteShots: List<DribbbleShot>): List<DribbbleShot> {
