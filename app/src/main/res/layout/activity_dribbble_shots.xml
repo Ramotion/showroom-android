@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_dribbble"
+    tools:context=".examples.dribbbleshots.presentation.ui.dribblbeshots.DribbbleShotsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/tbDribbbleShots"
+      android:layout_width="0dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="17dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:navigationIcon="@drawable/ic_arrow_back" />
+
+    <TextView
+      android:id="@+id/tvTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/dribbble_shots"
+      android:textColor="@android:color/white"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@id/tbDribbbleShots"
+      app:layout_constraintEnd_toEndOf="@id/tbDribbbleShots"
+      app:layout_constraintStart_toStartOf="@id/tbDribbbleShots"
+      app:layout_constraintTop_toTopOf="@id/tbDribbbleShots" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvDribbbleShots"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="17dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tbDribbbleShots" />
+
+    <ProgressBar
+      android:id="@+id/pbInitLoading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

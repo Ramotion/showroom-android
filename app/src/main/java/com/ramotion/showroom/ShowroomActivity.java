@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
@@ -39,6 +40,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.google.android.material.snackbar.Snackbar;
+import com.ramotion.showroom.examples.dribbbleshots.data.remote.api.DribbbleApi;
+import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribblbeshots.DribbbleShotsActivity;
+import com.ramotion.showroom.examples.dribbbleshots.utils.DIAdapterForJava;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Straightforward implementation
@@ -46,8 +57,11 @@ import androidx.appcompat.widget.AppCompatButton;
 public class ShowroomActivity extends AppCompatActivity {
     public final String TAG = "SHOWROOM";
 
+    private RelativeLayout rootContainer;
     private SliderContainer sliderContainer;
+    private ConstraintLayout buttonsContainer;
     private AppCompatButton contactButton;
+    private AppCompatButton shareShotButton;
     private TextView sliderCounterLabel;
     private View titleHelpButton;
     private FrameLayout titleLayout;
@@ -79,10 +93,18 @@ public class ShowroomActivity extends AppCompatActivity {
     private boolean helpLayoutShown = false;
     private boolean helpLayoutTitleBackgroundShown = false;
 
+    //Dribbble
+    private String savedDribbbleToken;
+    private DribbbleApi dribbbleAuthApi = DIAdapterForJava.INSTANCE.getDribbbleAuthApi(this);
+    private Disposable dribbbleAuthSubscription;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Dribbble token
+        savedDribbbleToken = getSharedPreferences("Showroom", Context.MODE_PRIVATE).getString("dribbbleToken", "");
 
         // Make activity fullscreen
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -94,11 +116,14 @@ public class ShowroomActivity extends AppCompatActivity {
         setContentView(R.layout.sr_main_activity);
 
         // Get UI parts
+        rootContainer = findViewById(R.id.rootContainer);
         // main layout
         mainLayout = findViewById(R.id.sr_main_content_layout);
         sliderContainer = findViewById(R.id.sr_slide_pager_container);
         sliderCounterLabel = findViewById(R.id.sr_slider_position_counter);
+        buttonsContainer = findViewById(R.id.sr_slider_buttons_container);
         contactButton = findViewById(R.id.sr_btn_contact);
+        shareShotButton = findViewById(R.id.sr_btn_share_shot);
         // title bar layout
         titleLayout = findViewById(R.id.sr_title_layout);
         titleHelpButton = findViewById(R.id.sr_title_help_btn);
@@ -138,10 +163,14 @@ public class ShowroomActivity extends AppCompatActivity {
         });
 
         // Contact button should open a link in browser
-        contactButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_contact_us_btn_link))));
+        contactButton.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_contact_us_btn_link)))));
+
+        shareShotButton.setOnClickListener(v -> {
+            if (savedDribbbleToken == null || savedDribbbleToken.isEmpty()) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_share_shot_btn_link))));
+            } else {
+                openDribblesShotsActivity();
             }
         });
 
@@ -156,6 +185,51 @@ public class ShowroomActivity extends AppCompatActivity {
 
         playInitialAnimations();
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (dribbbleAuthSubscription != null && !dribbbleAuthSubscription.isDisposed()) {
+            dribbbleAuthSubscription.dispose();
+        }
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        Uri data = intent.getData();
+        if (data != null) {
+            String code = data.getQueryParameter("code");
+            if (code != null && (savedDribbbleToken == null || savedDribbbleToken.isEmpty())) {
+                authToDribbble(code);
+            }
+        }
+    }
+
+    private void authToDribbble(String code) {
+        if (dribbbleAuthSubscription != null && !dribbbleAuthSubscription.isDisposed()) {
+            dribbbleAuthSubscription.dispose();
+        }
+        dribbbleAuthSubscription = dribbbleAuthApi.auth(
+                getString(R.string.dribbble_client_id),
+                getString(R.string.dribbble_consumer_secret),
+                code,
+                getString(R.string.dribbble_redirect_uri))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(
+                        result -> {
+                            savedDribbbleToken = result.getToken();
+                            getSharedPreferences("Showroom", Context.MODE_PRIVATE).edit().putString("dribbbleToken", result.getToken()).apply();
+                            openDribblesShotsActivity();
+                        },
+                        e -> Snackbar.make(rootContainer, e.getMessage(), Snackbar.LENGTH_SHORT).show());
+    }
+
+    private void openDribblesShotsActivity() {
+        startActivity(new Intent(this, DribbbleShotsActivity.class));
     }
 
     // Help button should show help layout with animation
@@ -360,7 +434,7 @@ public class ShowroomActivity extends AppCompatActivity {
         title.startAnimation(titleSlideFromRight);
         titleIcon.startAnimation(slideFromRight);
         titleHelpButton.startAnimation(titleHelpBtnShow);
-        contactButton.startAnimation(contactBtnShow);
+        buttonsContainer.startAnimation(contactBtnShow);
         sliderCounterLabel.startAnimation(sliderPosCounterAlpha);
 
     }

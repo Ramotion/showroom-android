@@ -85,5 +85,10 @@
     <color name="cm_color_primary">#3F51B5</color>
     <color name="cm_color_primary_dark">#303F9F</color>
     <color name="cm_color_accent">#FF4081</color>
-    
+
+
+    <!-- CIRCLE MENU -->
+    <color name="bg_color_dribbble">#EA4C89</color>
+    <color name="bg_color_dribbble_dark">#ed045e</color>
+
 </resources>

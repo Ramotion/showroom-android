@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
+import com.ramotion.showroom.examples.dribbbleshots.utils.DIAdapterForJava;
 import com.squareup.leakcanary.LeakCanary;
 
 public class ShowroomApplication extends Application {
@@ -20,6 +21,7 @@ public class ShowroomApplication extends Application {
         }
         LeakCanary.install(this);
 
+        DIAdapterForJava.INSTANCE.startDI(this, this);
     }
 
     synchronized public Tracker getDefaultTracker() {
@@ -30,5 +32,4 @@ public class ShowroomApplication extends Application {
         }
         return mTracker;
     }
-
 }
