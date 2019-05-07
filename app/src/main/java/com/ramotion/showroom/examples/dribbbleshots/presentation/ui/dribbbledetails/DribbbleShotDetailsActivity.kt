@@ -70,7 +70,6 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
     if (state.shotSaved) onBackPressed()
 
     if (state.shot != DribbbleShot.EMPTY) {
-      binding!!.tvShotTitle.text = state.shot.title
       imageLoader.loadImage(binding!!.ivShotImage, state.shot.imageNormal, false, 0, true)
     }
 

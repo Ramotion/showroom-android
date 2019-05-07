@@ -100,6 +100,7 @@ public class ShowroomActivity extends AppCompatActivity {
     private String savedDribbbleToken;
     private DribbbleApi dribbbleAuthApi = DIAdapterForJava.INSTANCE.getDribbbleAuthApi(this);
     private Disposable dribbbleAuthSubscription;
+    private Disposable shareShotBtnSubscription;
 
     @SuppressLint({"SetTextI18n", "CheckResult"})
     @Override
@@ -169,7 +170,7 @@ public class ShowroomActivity extends AppCompatActivity {
         contactButton.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sr_contact_us_btn_link)))));
 
-        RxView.clicks(shareShotButton)
+        shareShotBtnSubscription = RxView.clicks(shareShotButton)
                 .throttleFirst(1000, TimeUnit.MILLISECONDS)
                 .subscribe(click -> {
                             if (savedDribbbleToken == null || savedDribbbleToken.isEmpty()) {
@@ -197,6 +198,9 @@ public class ShowroomActivity extends AppCompatActivity {
     protected void onDestroy() {
         if (dribbbleAuthSubscription != null && !dribbbleAuthSubscription.isDisposed()) {
             dribbbleAuthSubscription.dispose();
+        }
+        if (shareShotBtnSubscription != null && !shareShotBtnSubscription.isDisposed()) {
+            shareShotBtnSubscription.dispose();
         }
         super.onDestroy();
     }

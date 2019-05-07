@@ -46,7 +46,6 @@
     <activity
       android:name=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity"
       android:screenOrientation="portrait"
-      android:windowSoftInputMode="adjustResize"
       android:theme="@style/DSAppTheme"/>
 
     <activity
