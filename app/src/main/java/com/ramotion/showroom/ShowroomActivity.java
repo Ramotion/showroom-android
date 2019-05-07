@@ -220,10 +220,10 @@ public class ShowroomActivity extends AppCompatActivity {
             dribbbleAuthSubscription.dispose();
         }
         dribbbleAuthSubscription = dribbbleAuthApi.auth(
-                getString(R.string.dribbble_client_id),
-                getString(R.string.dribbble_consumer_secret),
+                getString(R.string.dci),
+                getString(R.string.dcs),
                 code,
-                getString(R.string.dribbble_redirect_uri))
+                getString(R.string.dru))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(

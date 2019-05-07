@@ -15,9 +15,9 @@
     demos working examples. We hope this will help you learn more about what we offer.\n\n© 2017, Ramotion Inc.
   </string>
 
-  <string name="dribbble_client_id">7fab3efc357e770a5713317bf458da381b37eaf91e74b999a9dc928cd0c9b5cc</string>
-  <string name="dribbble_consumer_secret">8fd6a6b8bfd066dfee15d468c47756489be2c376bc32a94ffd309fc118a80428</string>
-  <string name="dribbble_redirect_uri">showroom://oauth</string>
+  <string name="dci">7fab3efc357e770a5713317bf458da381b37eaf91e74b999a9dc928cd0c9b5cc</string>
+  <string name="dcs">8fd6a6b8bfd066dfee15d468c47756489be2c376bc32a94ffd309fc118a80428</string>
+  <string name="dru">showroom://oauth</string>
 
   <string name="sr_contact_us_btn_link" translatable="false">
     https://www.ramotion.com/?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=contactact_us_butoon
