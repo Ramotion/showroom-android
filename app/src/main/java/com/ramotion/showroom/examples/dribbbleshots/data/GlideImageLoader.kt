@@ -10,7 +10,15 @@ import com.ramotion.showroom.examples.dribbbleshots.domain.ImageLoader
 
 object GlideImageLoader : ImageLoader {
 
-  override fun loadImage(iv: ImageView, url: String, centerCrop: Boolean, cornerRadius: Int, withAnim: Boolean, cache: Boolean) {
+  override fun loadImage(
+      iv: ImageView,
+      url: String,
+      centerCrop: Boolean,
+      cornerRadius: Int,
+      withAnim: Boolean,
+      cache: Boolean,
+      asGif: Boolean
+  ) {
     val options = RequestOptions().apply {
       when {
         centerCrop && cornerRadius > 0 -> transforms(CenterCrop(), RoundedCorners(cornerRadius))
@@ -19,8 +27,7 @@ object GlideImageLoader : ImageLoader {
       }
     }
 
-    var request = GlideApp.with(iv)
-        .load(url)
+    var request = if (asGif) GlideApp.with(iv).asGif().load(url) else GlideApp.with(iv).load(url)
 
     if (withAnim) {
       request = request.transition(withCrossFade())

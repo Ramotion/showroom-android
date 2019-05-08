@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.WindowManager
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -13,7 +14,8 @@ import com.ramotion.showroom.R
 import com.ramotion.showroom.databinding.ActivityDribbbleDetailsBinding
 import com.ramotion.showroom.examples.dribbbleshots.domain.ImageLoader
 import com.ramotion.showroom.examples.dribbbleshots.domain.entity.DribbbleShot
-import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleDetailsIntent.*
+import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleDetailsIntent.GetDribbbleShot
+import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleDetailsIntent.SaveDribbbleShot
 import com.ramotion.showroom.examples.dribbbleshots.utils.BaseView
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
@@ -66,11 +68,31 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
     viewModel.stateReceived().observe(this, Observer { state -> render(state) })
   }
 
+  private fun showSuccessDialog() {
+    AlertDialog.Builder(this)
+        .setCancelable(false)
+        .setMessage(R.string.shot_sent_successful_message)
+        .setPositiveButton(getString(R.string.ok)) { dialog, which ->
+          dialog.dismiss()
+          onBackPressed()
+        }
+        .show()
+  }
+
   override fun render(state: DribbbleDetailsState) {
-    if (state.shotSaved) onBackPressed()
+    if (state.shotSaved) {
+      showSuccessDialog()
+    }
 
     if (state.shot != DribbbleShot.EMPTY) {
-      imageLoader.loadImage(binding!!.ivShotImage, state.shot.imageNormal, false, 0, true)
+      imageLoader.loadImage(
+          iv = binding!!.ivShotImage,
+          url = state.shot.imageNormal,
+          centerCrop = true,
+          cornerRadius = 20,
+          withAnim = true,
+          asGif = true
+      )
     }
 
     binding!!.pbInitLoading.visibility = if (state.loading) VISIBLE else GONE
@@ -78,7 +100,7 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
     binding!!.btnSend.text = if (state.saveLoading) "" else getString(R.string.send)
 
     state.error?.run {
-      Snackbar.make(binding!!.root, message ?: getString(R.string.error_occurred), Snackbar.LENGTH_SHORT).show()
+      Snackbar.make(binding!!.root, message ?: getString(R.string.error_occurred), Snackbar.LENGTH_LONG).show()
     }
 
     currentState = state

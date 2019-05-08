@@ -2,7 +2,6 @@ package com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribblbesho
 
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
@@ -13,8 +12,8 @@ import com.ramotion.showroom.R
 import com.ramotion.showroom.databinding.ItemDribbbleShotBinding
 import com.ramotion.showroom.databinding.ItemDribbbleShotsEmptyPlaceholderBinding
 import com.ramotion.showroom.databinding.ItemLoadingDribbbleShotBinding
-import com.ramotion.showroom.examples.dribbbleshots.domain.entity.DribbbleShot
 import com.ramotion.showroom.examples.dribbbleshots.domain.ImageLoader
+import com.ramotion.showroom.examples.dribbbleshots.domain.entity.DribbbleShot
 import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity
 import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribblbeshots.ShotsListItem.*
 import java.util.concurrent.TimeUnit
@@ -24,7 +23,7 @@ const val DRIBBBLE_SHOT_ITEM = 0x998
 const val DRIBBBLE_PLACEHOLDER_ITEM = 0x997
 
 private const val UPDATE_SAVED = 0x996
-private const val UPDATE_TEASER = 0x995
+private const val UPDATE_IMAGE = 0x995
 
 class DribbbleShotsAdapter(private val imageLoader: ImageLoader)
   : ListAdapter<ShotsListItem, ViewHolder>(object : DiffUtil.ItemCallback<ShotsListItem>() {
@@ -49,7 +48,7 @@ class DribbbleShotsAdapter(private val imageLoader: ImageLoader)
     if (oldItem is DribbbleShotItem && newItem is DribbbleShotItem) {
       when {
         oldItem.shot.saved != newItem.shot.saved -> UPDATE_SAVED
-        oldItem.shot.imageTeaser != newItem.shot.imageTeaser -> UPDATE_TEASER
+        oldItem.shot.imageNormal != newItem.shot.imageNormal -> UPDATE_IMAGE
         else -> Any()
       }
     } else
@@ -104,7 +103,7 @@ class DribbbleShotsAdapter(private val imageLoader: ImageLoader)
         for (payload in payloads) {
           when (payload) {
             UPDATE_SAVED -> holder.updateSaved(item.shot)
-            UPDATE_TEASER -> holder.updateTeaser(item.shot, imageLoader)
+            UPDATE_IMAGE -> holder.updateImage(item.shot, imageLoader)
           }
         }
       }
@@ -118,10 +117,9 @@ class ShotsLoadingVH(binding: ItemLoadingDribbbleShotBinding) : ViewHolder(bindi
 
 class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(binding.root) {
   fun bind(shot: DribbbleShot, imageLoader: ImageLoader) {
-    binding.ivShot.alpha = if (shot.saved) 0.4f else 1f
-    binding.ivGif.alpha = if (shot.saved) 0.4f else 1f
-    binding.ivGif.visibility = View.VISIBLE
-    imageLoader.loadImage(binding.ivShot, shot.imageTeaser, true, 20, true)
+    binding.maskSaved.visibility = if (shot.saved) VISIBLE else GONE
+    binding.ivGif.visibility = VISIBLE
+    imageLoader.loadImage(iv = binding.ivShot, url = shot.imageNormal, centerCrop = true, cornerRadius = 20, withAnim = true, asGif = true)
 
     if (!shot.saved) {
       RxView.clicks(binding.dribbbleShotContainer)
@@ -137,8 +135,7 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   }
 
   fun updateSaved(shot: DribbbleShot) {
-    binding.ivShot.alpha = if (shot.saved) 0.4f else 1f
-    binding.ivGif.alpha = if (shot.saved) 0.4f else 1f
+    binding.maskSaved.visibility = if (shot.saved) VISIBLE else GONE
     if (!shot.saved) {
       RxView.clicks(binding.dribbbleShotContainer)
           .throttleFirst(1000, TimeUnit.MILLISECONDS)
@@ -154,8 +151,8 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
     }
   }
 
-  fun updateTeaser(shot: DribbbleShot, imageLoader: ImageLoader) {
-    imageLoader.loadImage(binding.ivShot, shot.imageTeaser, true, 20, true)
+  fun updateImage(shot: DribbbleShot, imageLoader: ImageLoader) {
+    imageLoader.loadImage(iv = binding.ivShot, url = shot.imageNormal, centerCrop = true, cornerRadius = 20, withAnim = true, asGif = true)
   }
 }
 

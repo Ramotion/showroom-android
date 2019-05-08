@@ -36,9 +36,10 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Google Analytics
     implementation 'com.google.android.gms:play-services-analytics:16.0.8'
-    //Firebase DB
+    //Firebase
     implementation 'com.google.firebase:firebase-core:16.0.8'
-    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-firestore:19.0.0'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
     // Support library
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'com.google.android.material:material:1.1.0-alpha06'

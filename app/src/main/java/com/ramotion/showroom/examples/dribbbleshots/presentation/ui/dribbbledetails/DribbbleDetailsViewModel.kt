@@ -49,7 +49,7 @@ class DribbbleDetailsViewModel(
       is StartLoading -> previousState.copy(loading = true, error = null)
       is StartSaveLoading -> previousState.copy(saveLoading = true, error = null)
       is DribbbleShotReceived -> previousState.copy(loading = false, shot = stateChange.shot)
-      is DribbbleShotSaved -> previousState.copy(shotSaved = true)
+      is DribbbleShotSaved -> previousState.copy(saveLoading = false, shotSaved = true)
       is Error -> previousState.copy(loading = false, saveLoading = false, error = stateChange.error)
       is HideError -> previousState.copy(error = null)
       else -> previousState

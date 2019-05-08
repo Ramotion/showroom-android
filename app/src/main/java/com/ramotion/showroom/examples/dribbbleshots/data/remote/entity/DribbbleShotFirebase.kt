@@ -1,9 +1,7 @@
 package com.ramotion.showroom.examples.dribbbleshots.data.remote.entity
 
-import com.google.firebase.database.IgnoreExtraProperties
-
-@IgnoreExtraProperties
 data class DribbbleShotFirebase(
+    var date: Long? = 0,
     var title: String? = "",
     val html_url: String? = "",
     var id: Int? = 0,

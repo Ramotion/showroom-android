@@ -31,6 +31,16 @@
       app:layout_constraintTop_toTopOf="@id/ivShot"
       app:layout_constraintEnd_toEndOf="@id/ivShot"/>
 
+    <View
+      android:id="@+id/maskSaved"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/mask_dribbble_shot_saved"
+      app:layout_constraintTop_toTopOf="@id/ivShot"
+      app:layout_constraintBottom_toBottomOf="@id/ivShot"
+      app:layout_constraintStart_toStartOf="@id/ivShot"
+      app:layout_constraintEnd_toEndOf="@id/ivShot"/>
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
