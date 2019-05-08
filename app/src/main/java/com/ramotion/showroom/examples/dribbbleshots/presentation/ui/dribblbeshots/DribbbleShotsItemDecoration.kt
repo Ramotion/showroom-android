@@ -15,9 +15,22 @@ class DribbbleShotsItemDecoration(context: Context) : RecyclerView.ItemDecoratio
   override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
     val position = parent.getChildAdapterPosition(view)
 
-    outRect.left = if (position == 0 || position % 2 == 0) outsideOffset else innerOffset
-    outRect.top = if (position == 0 || position == 1) 0 else innerOffset
-    outRect.right = if (position % 2 > 0) outsideOffset else innerOffset
+    val viewType = if (position >= 0) parent.adapter?.getItemViewType(position) else -1
+
+    outRect.left = when {
+      viewType == SHOTS_LOADING_ITEM -> 0
+      position == 0 || position % 2 == 0 -> outsideOffset
+      else -> innerOffset
+    }
+    outRect.top = when {
+      position == 0 || position == 1 -> 0
+      else -> innerOffset
+    }
+    outRect.right = when {
+      viewType == SHOTS_LOADING_ITEM -> 0
+      position % 2 > 0 -> outsideOffset
+      else -> innerOffset
+    }
     outRect.bottom = innerOffset
   }
 }

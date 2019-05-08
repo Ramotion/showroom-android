@@ -71,12 +71,12 @@ class DribbbleShotsActivity : AppCompatActivity(), BaseView<DribbbleShotsState> 
         addOnScrollListener(object : RecyclerView.OnScrollListener() {
           override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             val glm = layoutManager as GridLayoutManager
-            val totalItemCount = glm.itemCount
+            val totalItemCount = rvShotsAdapter.itemCount
             val lastVisibleItem = glm.findLastVisibleItemPosition()
             if (!rvShotsAdapter.currentList.contains(ShotsLoadingItem) &&
                 !rvShotsAdapter.currentList.contains(ShotsLoadingItem) &&
                 totalItemCount % 2 == 0 &&
-                totalItemCount <= lastVisibleItem + 1 &&
+                totalItemCount <= lastVisibleItem + 4 &&
                 dy > 0
             ) {
               val nextPage = (totalItemCount / 20) + 1

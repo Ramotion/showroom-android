@@ -11,6 +11,7 @@
       android:id="@+id/pbLoading"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:theme="@style/DSProgressbarWhite"
       android:layout_gravity="center"
       android:layout_marginTop="8dp"
       android:layout_marginBottom="8dp" />
