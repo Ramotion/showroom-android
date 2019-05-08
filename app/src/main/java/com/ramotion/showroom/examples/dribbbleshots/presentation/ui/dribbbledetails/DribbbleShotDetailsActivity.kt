@@ -1,9 +1,11 @@
 package com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails
 
 import android.os.Bundle
+import android.text.InputType
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.WindowManager
+import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -37,6 +39,7 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
     window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
     handleStates()
     initBinding()
+    initEtShotMessage()
     initIntents()
   }
 
@@ -47,6 +50,11 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
 
   private fun initBinding() {
     binding = DataBindingUtil.setContentView(this, R.layout.activity_dribbble_details)
+  }
+
+  private fun initEtShotMessage() {
+    binding!!.etShotMessage.imeOptions = EditorInfo.IME_ACTION_DONE
+    binding!!.etShotMessage.setRawInputType(InputType.TYPE_CLASS_TEXT)
   }
 
   override fun initIntents() {

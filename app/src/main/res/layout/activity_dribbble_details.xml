@@ -6,9 +6,7 @@
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".examples.dribbbleshots.presentation.ui.dribbbledetails.DribbbleShotDetailsActivity">
+    android:layout_height="match_parent">
 
     <ImageView
       android:id="@+id/ivShotImage"
@@ -34,7 +32,6 @@
       app:layout_constraintTop_toTopOf="@id/ivShotImage"
       app:layout_constraintEnd_toEndOf="@id/ivShotImage"/>
 
-
     <EditText
       android:id="@+id/etShotMessage"
       android:layout_width="0dp"
@@ -48,7 +45,6 @@
       android:scrollbars="vertical"
       android:textCursorDrawable="@null"
       android:inputType="textMultiLine"
-      android:imeOptions="actionDone"
       tools:text="SasdasdasdaAsdasdasdasdsadasdasdasdasdasdasdasdasdasdasd dfdsfc"
       app:layout_constraintWidth_percent="0.8"
       app:layout_constraintTop_toBottomOf="@id/ivShotImage"
