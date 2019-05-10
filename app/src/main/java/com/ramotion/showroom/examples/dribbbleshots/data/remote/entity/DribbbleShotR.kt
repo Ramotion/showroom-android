@@ -14,6 +14,8 @@ data class DribbbleShotR(
 
 @JsonObject
 data class DribbbleShotRImage(
+    @JsonField(name = ["teaser"]) var teaser: String? = "",
+    @JsonField(name = ["one_x"]) var oneX: String? = "",
     @JsonField(name = ["normal"]) var normal: String? = "",
-    @JsonField(name = ["teaser"]) var teaser: String? = ""
+    @JsonField(name = ["hidpi"]) var hidpi: String? = ""
 )

@@ -16,8 +16,7 @@ object GlideImageLoader : ImageLoader {
       centerCrop: Boolean,
       cornerRadius: Int,
       withAnim: Boolean,
-      cache: Boolean,
-      asGif: Boolean
+      cache: Boolean
   ) {
     val options = RequestOptions().apply {
       when {
@@ -27,7 +26,7 @@ object GlideImageLoader : ImageLoader {
       }
     }
 
-    var request = if (asGif) GlideApp.with(iv).asGif().load(url) else GlideApp.with(iv).load(url)
+    var request = GlideApp.with(iv).load(url)
 
     if (withAnim) {
       request = request.transition(withCrossFade())

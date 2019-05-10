@@ -121,7 +121,7 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
     binding.ivGif.visibility = VISIBLE
     imageLoader.loadImage(
         iv = binding.ivShot,
-        url = shot.imageNormal,
+        url = if (shot.oneX.isNotBlank()) shot.oneX else shot.imageNormal,
         centerCrop = true,
         cornerRadius = 20,
         withAnim = true
@@ -160,7 +160,7 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   fun updateImage(shot: DribbbleShot, imageLoader: ImageLoader) {
     imageLoader.loadImage(
         iv = binding.ivShot,
-        url = shot.imageNormal,
+        url = if (shot.oneX.isNotBlank()) shot.oneX else shot.imageNormal,
         centerCrop = true,
         cornerRadius = 20,
         withAnim = true

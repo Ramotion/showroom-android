@@ -37,7 +37,7 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
   private lateinit var currentState: DribbbleDetailsState
   private val imageLoader: ImageLoader by inject()
   private val shotId: Int by lazy(LazyThreadSafetyMode.NONE) { intent.getIntExtra("shotId", 0) }
-  var navBarHeight: Int = 0
+  private var navBarHeight: Int = 0
 
   override fun onCreate(savedInstanceState: Bundle?) {
     window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
@@ -52,6 +52,7 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
 
   override fun onDestroy() {
     binding = null
+    intentsSubscription.dispose()
     super.onDestroy()
   }
 
@@ -130,7 +131,7 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
     if (state.shot != DribbbleShot.EMPTY) {
       imageLoader.loadImage(
           iv = binding!!.ivShotImage,
-          url = state.shot.imageNormal,
+          url = if (state.shot.imageHi.isNotBlank()) state.shot.imageHi else state.shot.imageNormal,
           centerCrop = true,
           withAnim = true
       )

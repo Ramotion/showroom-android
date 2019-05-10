@@ -10,6 +10,5 @@ interface ImageLoader {
       centerCrop: Boolean = false,
       cornerRadius: Int = 0,
       withAnim: Boolean = false,
-      cache: Boolean = true,
-      asGif:Boolean = false)
+      cache: Boolean = true)
 }

@@ -37,8 +37,10 @@ class DribbbleShotsRemoteDataSource(
     DribbbleShot(
         title = title ?: "",
         htmlUrl = htmlUrl ?: "",
+        oneX = images?.oneX ?: "",
         imageTeaser = images?.teaser ?: "",
         imageNormal = images?.normal ?: "",
+        imageHi = images?.hidpi ?: "",
         id = id ?: 0,
         userId = userId,
         message = "")
