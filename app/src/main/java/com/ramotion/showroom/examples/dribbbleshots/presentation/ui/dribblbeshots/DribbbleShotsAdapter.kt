@@ -117,7 +117,7 @@ class ShotsLoadingVH(binding: ItemLoadingDribbbleShotBinding) : ViewHolder(bindi
 
 class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(binding.root) {
   fun bind(shot: DribbbleShot, imageLoader: ImageLoader) {
-    binding.maskSaved.visibility = if (shot.saved) VISIBLE else GONE
+    binding.savedGroup.visibility = if (shot.saved) VISIBLE else GONE
     binding.ivGif.visibility = VISIBLE
     imageLoader.loadImage(
         iv = binding.ivShot,
@@ -141,7 +141,7 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   }
 
   fun updateSaved(shot: DribbbleShot) {
-    binding.maskSaved.visibility = if (shot.saved) VISIBLE else GONE
+    binding.savedGroup.visibility = if (shot.saved) VISIBLE else GONE
     if (!shot.saved) {
       RxView.clicks(binding.dribbbleShotContainer)
           .throttleFirst(1000, TimeUnit.MILLISECONDS)

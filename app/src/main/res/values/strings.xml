@@ -94,4 +94,5 @@
   <string name="send">Send</string>
   <string name="shot_sent_successful_message">We will contact with you soon. Thank you for your interest.</string>
   <string name="ok">Ok</string>
+  <string name="sent">Sent</string>
 </resources>
