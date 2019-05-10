@@ -228,4 +228,12 @@
         <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
     </style>
 
+    <style name="DSAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/SrExamplesActivityAnimations</item>
+    </style>
+
+    <style name="DSProgressbarWhite" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
 </resources>

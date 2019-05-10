@@ -1,69 +1,98 @@
 <resources>
-    <string name="sr_app_name">Showroom</string>
+  <string name="sr_app_name">Showroom</string>
 
-    <string name="sr_help_layout_title">About Us</string>
+  <string name="sr_help_layout_title">About Us</string>
 
-    <string name="sr_contact_us_btn_text">CONTACT US</string>
+  <string name="sr_contact_us_btn_text">CONTACT US</string>
+  <string name="sr_share_shot_btn_text">SHARE SHOT</string>
 
-    <string name="sr_help_layout_content_text">
-For seven years Ramotion has been designing for those who desire to improve their lives and the lives of others by inventing and implementing digital products.\n\nWe are very proud that our customers entrusted us with such an important task as the improvement of their products’ user interfaces.\n\nToday, we are pleased to introduce an evolved Ramotion, featuring designs in a code, and we hope to bring even more value to our customers’ projects on which our team works.\n\nTo help you evaluate the quality of development, we have created a mobile application which demos working examples. We hope this will help you learn more about what we offer.\n\n© 2017, Ramotion Inc.
-    </string>
+  <string name="sr_help_layout_content_text">
+    For nine years Ramotion has been designing for those who desire to improve their lives and the lives of others by
+    inventing and implementing digital products.\n\nWe are very proud that our customers entrusted us with such an
+    important task as the improvement of their products’ user interfaces.\n\nToday, we are pleased to introduce an
+    evolved Ramotion, featuring designs in a code, and we hope to bring even more value to our customers’ projects on
+    which our team works.\n\nTo help you evaluate the quality of development, we have created a mobile application which
+    demos working examples. We hope this will help you learn more about what we offer.\n\n© 2019, Ramotion Inc.
+  </string>
 
-    <string name="sr_contact_us_btn_link" translatable="false">
-        https://www.ramotion.com/?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=contactact_us_butoon</string>
-    <string name="sr_bottom_bar_facebook_link" translatable="false">https://www.facebook.com/Ramotion</string>
-    <string name="sr_bottom_bar_dribble_link" translatable="false">
-        https://dribbble.com/ramotion?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=showroomandroid</string>
-    <string name="sr_bottom_bar_instagram_link">https://instagram.com/ramotion</string>
-    <string name="sr_bottom_bar_twitter_link">https://twitter.com/ramotion</string>
-    <string name="sr_bottom_bar_github_link">https://github.com/ramotion</string>
+  <string name="dci">7fab3efc357e770a5713317bf458da381b37eaf91e74b999a9dc928cd0c9b5cc</string>
+  <string name="dcs">8fd6a6b8bfd066dfee15d468c47756489be2c376bc32a94ffd309fc118a80428</string>
+  <string name="dru">showroom://oauth</string>
 
-    <string name="fc_order_id_mock"># 1234–5678</string>
-    <string name="fc_price_mock">$25</string>
-    <string name="fc_requests_count_mock">5</string>
-    <string name="fc_requests_count_badge">REQUESTS</string>
-    <string name="fc_weight_mock">50 oz</string>
-    <string name="fc_weight_badge">WEIGHT</string>
-    <string name="fc_pledge_mock">$150</string>
-    <string name="fc_pledge_badge">PLEDGE</string>
-    <string name="fc_sender_badge">SENDER</string>
-    <string name="fc_client_name_mock">Edward Norton</string>
-    <string name="fc_rating_mock">(26)</string>
-    <string name="fc_from_badge">FROM</string>
-    <string name="fc_to_badge">TO</string>
-    <string name="fc_delivery_date_badge">DELIVERY DATE</string>
-    <string name="fc_delivery_time_mock">6:30 pm</string>
-    <string name="fc_delivery_date_mock">May 16, 2016</string>
-    <string name="fc_deadline_badge">REQUEST DEADLINE</string>
-    <string name="fc_deadline_time_mock">24 minutes</string>
-    <string name="fc_request_btn_text">REQUEST</string>
-    <string name="fc_btn_annotation_mock">5 people have sent a request</string>
-    <string name="fc_content_from1_mock">W 90th St</string>
-    <string name="fc_content_from2_mock">New York, NY 10025</string>
-    <string name="fc_content_to1_mock">46th Ave</string>
-    <string name="fc_content_to2_mock">Woodside, NY 11101</string>
+  <string name="sr_contact_us_btn_link" translatable="false">
+    https://www.ramotion.com/?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=contactact_us_butoon
+  </string>
+  <string name="sr_share_shot_btn_link" translatable="false">
+    https://dribbble.com/oauth/authorize?client_id=7fab3efc357e770a5713317bf458da381b37eaf91e74b999a9dc928cd0c9b5cc&amp;redirect_uri=showroom://oauth&amp;scope=""&amp;state=comramotion
+  </string>
+  <string name="sr_bottom_bar_facebook_link" translatable="false">https://www.facebook.com/Ramotion</string>
+  <string name="sr_bottom_bar_dribble_link" translatable="false">
+    https://dribbble.com/ramotion?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=showroomandroid
+  </string>
+  <string name="sr_bottom_bar_instagram_link">https://instagram.com/ramotion</string>
+  <string name="sr_bottom_bar_twitter_link">https://twitter.com/ramotion</string>
+  <string name="sr_bottom_bar_github_link">https://github.com/ramotion</string>
+
+  <string name="fc_order_id_mock"># 1234–5678</string>
+  <string name="fc_price_mock">$25</string>
+  <string name="fc_requests_count_mock">5</string>
+  <string name="fc_requests_count_badge">REQUESTS</string>
+  <string name="fc_weight_mock">50 oz</string>
+  <string name="fc_weight_badge">WEIGHT</string>
+  <string name="fc_pledge_mock">$150</string>
+  <string name="fc_pledge_badge">PLEDGE</string>
+  <string name="fc_sender_badge">SENDER</string>
+  <string name="fc_client_name_mock">Edward Norton</string>
+  <string name="fc_rating_mock">(26)</string>
+  <string name="fc_from_badge">FROM</string>
+  <string name="fc_to_badge">TO</string>
+  <string name="fc_delivery_date_badge">DELIVERY DATE</string>
+  <string name="fc_delivery_time_mock">6:30 pm</string>
+  <string name="fc_delivery_date_mock">May 16, 2016</string>
+  <string name="fc_deadline_badge">REQUEST DEADLINE</string>
+  <string name="fc_deadline_time_mock">24 minutes</string>
+  <string name="fc_request_btn_text">REQUEST</string>
+  <string name="fc_btn_annotation_mock">5 people have sent a request</string>
+  <string name="fc_content_from1_mock">W 90th St</string>
+  <string name="fc_content_from2_mock">New York, NY 10025</string>
+  <string name="fc_content_to1_mock">46th Ave</string>
+  <string name="fc_content_to2_mock">Woodside, NY 11101</string>
 
 
-    <string name="cs_text1">The museum is housed in the Louvre Palace, originally built as a fortress in the late 12th century…</string>
-    <string name="cs_text2">Gwanghwamun is the main and largest gate of Gyeongbokgung Palace, in Jongno-gu, Seoul, South Korea.</string>
-    <string name="cs_text3">Tower Bridge is a combined bascule and suspension bridge in London built in 1886–1894.</string>
-    <string name="cs_text4">The Temple of Heaven is an imperial complex of religious buildings situated in the southeastern part…</string>
-    <string name="cs_text5">The Aegean Islands are within the sea and some bound it on its southern periphery…</string>
+  <string name="cs_text1">The museum is housed in the Louvre Palace, originally built as a fortress in the late 12th
+    century…
+  </string>
+  <string name="cs_text2">Gwanghwamun is the main and largest gate of Gyeongbokgung Palace, in Jongno-gu, Seoul, South
+    Korea.
+  </string>
+  <string name="cs_text3">Tower Bridge is a combined bascule and suspension bridge in London built in 1886–1894.
+  </string>
+  <string name="cs_text4">The Temple of Heaven is an imperial complex of religious buildings situated in the
+    southeastern part…
+  </string>
+  <string name="cs_text5">The Aegean Islands are within the sea and some bound it on its southern periphery…</string>
 
 
-    <string name="gv_title_activity_details">DetailsActivity</string>
-    <string name="gv_answer">ANSWER</string>
-    <string name="gv_answer_low">answer</string>
-    <string name="gv_connect">CONNECT</string>
-    <string name="gv_years">years</string>
-    <string name="gv_asked">asked</string>
-    <string name="gv_profile">"'s Profile"</string>
-    <string name="gv_transition_avatar_border" translatable="false">avatar_border</string>
-    <string name="gv_transition_card" translatable="false">card</string>
-    <string name="gv_transition_background" translatable="false">background</string>
-    <string name="gv_transition_list" translatable="false">list</string>
-    <string name="gv_details_connect">CONNECT</string>
-    <string name="gv_details_close">CLOSE</string>
-    <string name="gv_details_details">DETAILS</string>
-    <string name="gv_initializing_faker">Initializing Faker...</string>
+  <string name="gv_title_activity_details">DetailsActivity</string>
+  <string name="gv_answer">ANSWER</string>
+  <string name="gv_answer_low">answer</string>
+  <string name="gv_connect">CONNECT</string>
+  <string name="gv_years">years</string>
+  <string name="gv_asked">asked</string>
+  <string name="gv_profile">"'s Profile"</string>
+  <string name="gv_transition_avatar_border" translatable="false">avatar_border</string>
+  <string name="gv_transition_card" translatable="false">card</string>
+  <string name="gv_transition_background" translatable="false">background</string>
+  <string name="gv_transition_list" translatable="false">list</string>
+  <string name="gv_details_connect">CONNECT</string>
+  <string name="gv_details_close">CLOSE</string>
+  <string name="gv_details_details">DETAILS</string>
+  <string name="gv_initializing_faker">Initializing Faker...</string>
+  <string name="dribbble_shots">Dribbble shots</string>
+  <string name="error_occurred">Error occurred</string>
+  <string name="please_post_shot">Please post an animated shot on Dribbble first</string>
+  <string name="send">Send</string>
+  <string name="shot_sent_successful_message">We will contact with you soon. Thank you for your interest.</string>
+  <string name="ok">Ok</string>
+  <string name="sent">Sent</string>
 </resources>

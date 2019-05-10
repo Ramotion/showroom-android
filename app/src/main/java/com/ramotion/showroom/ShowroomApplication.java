@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
+import com.ramotion.showroom.examples.dribbbleshots.utils.DIAdapterForJava;
 import com.squareup.leakcanary.LeakCanary;
 
 public class ShowroomApplication extends Application {
@@ -13,13 +14,14 @@ public class ShowroomApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
+//        if (LeakCanary.isInAnalyzerProcess(this)) {
+//            // This process is dedicated to LeakCanary for heap analysis.
+//            // You should not init your app in this process.
+//            return;
+//        }
+//        LeakCanary.install(this);
 
+        DIAdapterForJava.INSTANCE.startDI(this, this);
     }
 
     synchronized public Tracker getDefaultTracker() {
@@ -30,5 +32,4 @@ public class ShowroomApplication extends Application {
         }
         return mTracker;
     }
-
 }

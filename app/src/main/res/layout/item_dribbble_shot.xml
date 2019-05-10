@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/dribbbleShotContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+      android:id="@+id/ivShot"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      tools:background="@color/bg_color_dribbble"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintDimensionRatio="1"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+      android:id="@+id/maskSaved"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/mask_dribbble_shot_saved"
+      app:layout_constraintTop_toTopOf="@id/ivShot"
+      app:layout_constraintBottom_toBottomOf="@id/ivShot"
+      app:layout_constraintStart_toStartOf="@id/ivShot"
+      app:layout_constraintEnd_toEndOf="@id/ivShot"/>
+
+    <ImageView
+      android:id="@+id/ivGif"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:src="@drawable/ic_gif"
+      android:visibility="gone"
+      tools:visibility="visible"
+      app:layout_constraintTop_toTopOf="@id/ivShot"
+      app:layout_constraintEnd_toEndOf="@id/ivShot"/>
+
+    <ImageView
+      android:id="@+id/ivCheck"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:layout_marginStart="12dp"
+      android:layout_marginBottom="16dp"
+      android:padding="4dp"
+      android:src="@drawable/ic_check"
+      android:background="@drawable/shape_circle_white_transparent"
+      app:layout_constraintBottom_toBottomOf="@id/ivShot"
+      app:layout_constraintStart_toStartOf="@id/ivShot"/>
+
+    <TextView
+      android:id="@+id/tvSent"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/sent"
+      android:textColor="@android:color/white"
+      android:textSize="18dp"
+      android:layout_marginStart="8dp"
+      app:layout_constraintTop_toTopOf="@id/ivCheck"
+      app:layout_constraintBottom_toBottomOf="@id/ivCheck"
+      app:layout_constraintStart_toEndOf="@id/ivCheck"/>
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/savedGroup"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="maskSaved, ivCheck, tvSent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
