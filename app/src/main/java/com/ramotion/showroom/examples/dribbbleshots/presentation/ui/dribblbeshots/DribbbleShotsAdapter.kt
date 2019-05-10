@@ -119,7 +119,13 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   fun bind(shot: DribbbleShot, imageLoader: ImageLoader) {
     binding.maskSaved.visibility = if (shot.saved) VISIBLE else GONE
     binding.ivGif.visibility = VISIBLE
-    imageLoader.loadImage(iv = binding.ivShot, url = shot.imageNormal, centerCrop = true, cornerRadius = 20, withAnim = true, asGif = true)
+    imageLoader.loadImage(
+        iv = binding.ivShot,
+        url = shot.imageNormal,
+        centerCrop = true,
+        cornerRadius = 20,
+        withAnim = true
+    )
 
     if (!shot.saved) {
       RxView.clicks(binding.dribbbleShotContainer)
@@ -152,7 +158,13 @@ class DribbbleShotVH(private val binding: ItemDribbbleShotBinding) : ViewHolder(
   }
 
   fun updateImage(shot: DribbbleShot, imageLoader: ImageLoader) {
-    imageLoader.loadImage(iv = binding.ivShot, url = shot.imageNormal, centerCrop = true, cornerRadius = 20, withAnim = true, asGif = true)
+    imageLoader.loadImage(
+        iv = binding.ivShot,
+        url = shot.imageNormal,
+        centerCrop = true,
+        cornerRadius = 20,
+        withAnim = true
+    )
   }
 }
 

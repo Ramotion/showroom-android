@@ -5,6 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/detailContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -61,7 +62,7 @@
       android:background="@drawable/sr_button_contact"
       android:text="@string/send"
       app:layout_constraintWidth_percent="0.8"
-      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/bottomTextGuideline"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -89,6 +90,19 @@
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/bottomTextGuideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintGuide_end="0dp"
+      android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/imagesGroup"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:constraint_referenced_ids="ivShotImage, ivClose"/>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

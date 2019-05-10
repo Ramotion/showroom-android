@@ -1,9 +1,12 @@
 package com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledetails
 
+import android.graphics.Rect
 import android.os.Bundle
 import android.text.InputType
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AlertDialog
@@ -21,6 +24,7 @@ import com.ramotion.showroom.examples.dribbbleshots.presentation.ui.dribbbledeta
 import com.ramotion.showroom.examples.dribbbleshots.utils.BaseView
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
+import net.yslibrary.android.keyboardvisibilityevent.KeyboardVisibilityEvent
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.concurrent.TimeUnit
@@ -33,13 +37,16 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
   private lateinit var currentState: DribbbleDetailsState
   private val imageLoader: ImageLoader by inject()
   private val shotId: Int by lazy(LazyThreadSafetyMode.NONE) { intent.getIntExtra("shotId", 0) }
+  var navBarHeight: Int = 0
 
   override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
     window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    super.onCreate(savedInstanceState)
     handleStates()
     initBinding()
     initEtShotMessage()
+    initNavBarHeight()
+    initKeyboardWatcher()
     initIntents()
   }
 
@@ -55,6 +62,34 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
   private fun initEtShotMessage() {
     binding!!.etShotMessage.imeOptions = EditorInfo.IME_ACTION_DONE
     binding!!.etShotMessage.setRawInputType(InputType.TYPE_CLASS_TEXT)
+  }
+
+  private fun initNavBarHeight() {
+    val activityRoot = (findViewById<ViewGroup>(android.R.id.content)).getChildAt(0)
+    activityRoot.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+      override fun onGlobalLayout() {
+        activityRoot.viewTreeObserver.removeOnGlobalLayoutListener(this)
+        val r = Rect()
+        activityRoot.getWindowVisibleDisplayFrame(r)
+        val screenHeight = activityRoot.rootView.height
+        navBarHeight = screenHeight - r.height()
+      }
+    })
+  }
+
+  private fun initKeyboardWatcher() {
+    KeyboardVisibilityEvent.setEventListener(this) { isOpen ->
+      binding?.run {
+        val r = Rect()
+        val activityRoot = (findViewById<ViewGroup>(android.R.id.content)).getChildAt(0)
+        activityRoot.getWindowVisibleDisplayFrame(r)
+        val screenHeight = activityRoot.rootView.height
+        val heightDiff = screenHeight - (r.height() + navBarHeight)
+
+        imagesGroup.visibility = if (isOpen) GONE else VISIBLE
+        bottomTextGuideline.setGuidelineEnd(if (isOpen) heightDiff else 0)
+      }
+    }
   }
 
   override fun initIntents() {
@@ -97,9 +132,7 @@ class DribbbleShotDetailsActivity : AppCompatActivity(), BaseView<DribbbleDetail
           iv = binding!!.ivShotImage,
           url = state.shot.imageNormal,
           centerCrop = true,
-          cornerRadius = 20,
-          withAnim = true,
-          asGif = true
+          withAnim = true
       )
     }
 
