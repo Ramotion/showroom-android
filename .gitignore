@@ -37,3 +37,5 @@ obj/
 /app/google-services.json
 app/libs/
 
+# Keys #
+ramotion-android-keystore/

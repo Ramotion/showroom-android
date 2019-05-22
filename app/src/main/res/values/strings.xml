@@ -20,7 +20,7 @@
   <string name="dru">showroom://oauth</string>
 
   <string name="sr_contact_us_btn_link" translatable="false">
-    https://www.ramotion.com/?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=contactact_us_butoon
+    https://dev.ramotion.com?utm_source=showroom&amp;utm_medium=special&amp;utm_campaign=contactact_us_butoon
   </string>
   <string name="sr_share_shot_btn_link" translatable="false">
     https://dribbble.com/oauth/authorize?client_id=7fab3efc357e770a5713317bf458da381b37eaf91e74b999a9dc928cd0c9b5cc&amp;redirect_uri=showroom://oauth&amp;scope=""&amp;state=comramotion
